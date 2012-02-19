@@ -1,0 +1,32 @@
+<head>
+<title>Boothj5: Home</title>
+
+</head>
+<body bgcolor="FFFBFB">
+
+<!--#include file="headerfooter.html" -->
+
+<hr>
+
+<center>
+<h1><b>Boothj5 Home</h1> </b>
+</center>
+
+Projects:
+
+<ul>
+<li>
+<a href="profanity.shtml">Profanity</a>
+<li>
+<a href="head-unit.shtml">Head-unit</a>
+<li>
+<a href="pyloc.shtml">Pyloc</a>
+</ul>
+
+<hr>
+
+<!--#include virtual="headerfooter.html" -->
+</body>
+
+</html>
+

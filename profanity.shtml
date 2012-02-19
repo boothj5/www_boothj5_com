@@ -1,0 +1,35 @@
+<head>
+<title>Boothj5: Profanity</title>
+
+</head>
+<body bgcolor="FFFBFB">
+
+<!--#include file="headerfooter.html" -->
+
+<hr>
+
+<center>
+<h1><b>Profanity</h1> </b>
+</center>
+
+<p>
+Profanity is a simple Jabber client written in C using ncurses and libstrophe, inspired by Irssi.
+<br><br>
+
+Screenshots:<br><br>
+
+<a href="prof1.png"><img src="prof1_th.png"></a>
+
+<a href="prof2.png"><img src="prof2_th.png"></a>
+
+<p>
+The source can be found on <a href="http://github.com/boothj5/profanity">Github</a>
+
+
+<hr>
+
+<!--#include virtual="headerfooter.html" -->
+</body>
+
+</html>
+
