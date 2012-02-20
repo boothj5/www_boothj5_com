@@ -1,6 +1,10 @@
 <head>
 <title>Boothj5: Pyloc</title>
-
+<style>
+<!--
+.tab { margin-left: 40px; }
+-->
+</style>
 </head>
 <body bgcolor="FFFBFB">
 
@@ -13,20 +17,67 @@
 </center>
 
 <p>
-Pyloc is Lines Of Code analyser written in Python.  Supported languages are configurable.
+Pyloc is a Lines Of Code analyser written in Python. Supported languages are configurable. 
+Stats are broken down in to code, comments and whitespace, with Physical SLOC including everything.
+<p>
+Requires Python 2.6+ and <a href="http://www.wxpython.org/">WxPython</a> to run the GUI.
 
-<br><br>
+<h4>Source</h4>
 
-Screenshots:<br><br>
+The source can be found on <a href="http://github.com/boothj5/pyloc">Github</a>
+
+<h4>Screenshots</h4>
 
 <a href="pyloc1.png"><img src="pyloc1_th.png"></a>
 
 <a href="pyloc2.png"><img src="pyloc2_th.png"></a>
 
+<a href="pyloc3.png"><img src="pyloc3_th.png"></a>
 
-<p>
-The source can be found on <a href="http://github.com/boothj5/pyloc">Github</a>
+<a href="pyloc4.png"><img src="pyloc4_th.png"></a>
 
+<h4>Adding new languages</h4>
+
+To add support for a new language, edit languages.py.  Add a string value representing the
+language:
+
+<pre class="tab">
+LUA = "Lua"
+</pre> 
+
+Add the definition:
+
+<pre class="tab">
+LUA :
+  { EXTENSIONS:    [ ".lua" ] ,
+    LINECOMMENTS:  "--" ,
+    BLOCKCOMMENTS: [ ( "--[[" , "]]" ) ] }
+</pre>
+
+Where:
+
+<ol>
+<li>EXTENSIONS is a comma seperated list of file extensions.</li>
+<li>LINECOMMENTS (optional) is a string representing characters used for line comments.</li>
+<li>BLOCKCOMMENTS (optional) is a comma seperated list of pairs of begin and end block comment strings.</li>
+</ol>
+
+
+<h4>Running</h4>
+
+Pyloc can either be run as a desktop GUI:
+
+<pre class="tab">
+./pyloc.py
+</pre>
+
+Or as a terminal application by calling pylocstats.py directly:
+
+<pre class="tab">
+Usage: pylocstats.py directory [-v]
+</pre>
+
+Where 'directory' is the directory to scan and -v will cause verbose output.
 
 <hr>
 
