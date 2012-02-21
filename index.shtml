@@ -1,6 +1,9 @@
 <html>
 <head>
 <title>Boothj5: Home</title>
+<style type="text/css">
+.backwards {unicode-bidi:bidi-override; direction: rtl;}
+</style>
 </head>
 <body bgcolor="FFFBFB">
 <!--#include file="headerfooter.html" -->
@@ -11,7 +14,7 @@
 
 Full time Software Developer, part time hacker.
 
-<h4>Hobby Projects</h4>
+<h4>Projects</h4>
 
 <ul>
 <li>
@@ -23,7 +26,7 @@ Full time Software Developer, part time hacker.
 </ul>
 
 <p>
-Contact me via email boothj5web at gmail dot com
+<b>Email:</b>&nbsp;<span class="backwards">moc.liamg@bew5jhtoob</span>
 </p>
 
 <hr>
