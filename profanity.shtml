@@ -26,9 +26,10 @@ The source can be found on <a href="http://github.com/boothj5/profanity">Github<
 
 <ul>
 <li>XMPP chat</li>
-<li>Supports TLS</li>
+<li>Enable/disable TLS</li>
 <li>Console window for logging</li>
 <li>Up to 9 active chat windows</li>
+<li>Sending of random control characters to recipient on window resize</li>
 </ul>
 
 <hr>
