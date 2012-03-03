@@ -255,6 +255,7 @@ right: 10%;
 top: 45px;
 width: 50%;
 margin: 0;
+z-index: 200;
 }
 
 nav a{
@@ -281,6 +282,7 @@ top: 0px;
 width: 100%;
 background: #222;
 height: 60px;
+z-index: 50;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#555555), to(#000000)); /* Saf4+, Chrome */
   background-image: -webkit-linear-gradient(top, #555555, #000000); /* Chrome 10+, Saf5.1+, iOS 5+ */
   background-image:    -moz-linear-gradient(top, #555555, #000000); /* FF3.6 */
@@ -369,5 +371,30 @@ opacity: 0.2;
   transform-origin: -100%  100%;
 }
 */
+
+@media screen and (max-width:800px) {
+  header {
+    height: 100px;
+   }
+
+header h1 {
+  left: 18%;
+  }
+
+nav {;
+  width: 100%;
+  top: 90px;
+  left: 5%;
+  }
+
+nav a {
+  float: left;
+}
+
+header, header h1, nav {
+  position: absolute;
+  }
+
+}
 
 
