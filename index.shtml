@@ -1,6 +1,8 @@
+<!DOCTYPE html>
 <html>
 <head>
 <title>Boothj5: Home</title>
+
 <style type="text/css">
 .backwards {unicode-bidi:bidi-override; direction: rtl;}
 </style>
@@ -8,16 +10,11 @@
 <link href="css/boothj5_main.css" type="text/css" rel="stylesheet"/>
 
 </head>
+
 <body bgcolor="FFFBFB">
 <!--#include file="headerfooter.html" -->
-<hr>
-<header>
-<h1><b>Boothj5 Home</h1> </b>
-</header>
-
-<p>
-Full time Software Developer, part time hacker.
-</p>
+<div id="Content"/>
+<h2><b>Boothj5 Home</h2> </b>
 
 <h4>Projects</h4>
 
@@ -41,8 +38,7 @@ Thanks to <a href="http://www.matthewbalaam.co.uk">Matthew Balaam</a> for giving
 </p>
 
 <hr>
-
-<!--#include virtual="headerfooter.html" -->
+</div>
 </body>
 
 </html>

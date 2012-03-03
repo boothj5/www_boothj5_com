@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
 <title>Boothj5: Head-Unit</title>
@@ -78,10 +79,8 @@ body .il { color: #666666 } /* Literal.Number.Integer.Long */
 </head>
 <body bgcolor="FFFBFB">
 <!--#include file="headerfooter.html" -->
-<hr>
-<header>
-<h1>Head-Unit</h1>
-</header>
+<div id="Content"/>
+<h2><b>Head-Unit</h2> </b>
 
 <p>
 Head-Unit is a small unit testing framework for C and C++, written in C.
@@ -253,8 +252,7 @@ test: compile-tests
 
 
 <hr>
-
-<!--#include virtual="headerfooter.html" -->
+</div>
 </body>
 
 </html>

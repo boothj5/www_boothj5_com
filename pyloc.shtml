@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
 <title>Boothj5: Pyloc</title>
@@ -11,10 +12,8 @@
 </head>
 <body bgcolor="FFFBFB">
 <!--#include file="headerfooter.html" -->
-<hr>
-<header>
-<h1><b>Pyloc</h1> </b>
-</header>
+<div id="Content"/>
+<h2><b>Pyloc</h2> </b>
 
 <p>
 Pyloc is a Lines Of Code analyser written in Python. Supported languages are configurable. 
@@ -87,8 +86,7 @@ Usage: pylocstats.py directory [-v]
 Where 'directory' is the directory to scan and -v will cause verbose output.
 
 <hr>
-
-<!--#include virtual="headerfooter.html" -->
+</div>
 </body>
 
 </html>
