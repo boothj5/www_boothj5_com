@@ -1,6 +1,8 @@
 <html>
 <head>
 <title>Boothj5: Profanity</title>
+<link href="css/boothj5_main.css" type="text/css" rel="stylesheet"/>
+
 </head>
 <body bgcolor="FFFBFB">
 <!--#include file="headerfooter.html" -->
@@ -17,11 +19,14 @@ Profanity is a simple Jabber client written in C using <a href="http://www.gnu.o
 The source can be found on <a href="http://github.com/boothj5/profanity">Github</a>
 
 <h4>Screenshots</h4>
-
+<!--
 <a href="prof1.png"><img src="prof1_th.png"></a>
 
 <a href="prof2.png"><img src="prof2_th.png"></a>
+-->
+<a href="prof1.png"><img src="prof1.png"></a>
 
+<a href="prof2.png"><img src="prof2.png"></a>
 <h4>Features</h4>
 
 <ul>

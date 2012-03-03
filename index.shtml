@@ -4,13 +4,16 @@
 <style type="text/css">
 .backwards {unicode-bidi:bidi-override; direction: rtl;}
 </style>
+
+<link href="css/boothj5_main.css" type="text/css" rel="stylesheet"/>
+
 </head>
 <body bgcolor="FFFBFB">
 <!--#include file="headerfooter.html" -->
 <hr>
-<center>
+<header>
 <h1><b>Boothj5 Home</h1> </b>
-</center>
+</header>
 
 Full time Software Developer, part time hacker.
 

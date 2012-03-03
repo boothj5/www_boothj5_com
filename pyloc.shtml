@@ -6,6 +6,8 @@
 .tab { margin-left: 40px; }
 -->
 </style>
+<link href="css/boothj5_main.css" type="text/css" rel="stylesheet"/>
+
 </head>
 <body bgcolor="FFFBFB">
 <!--#include file="headerfooter.html" -->
@@ -25,7 +27,7 @@ Requires Python 2.6+ and <a href="http://www.wxpython.org/">WxPython</a> to run 
 The source can be found on <a href="http://github.com/boothj5/pyloc">Github</a>
 
 <h4>Screenshots</h4>
-
+<!--
 <a href="pyloc1.png"><img src="pyloc1_th.png"></a>
 
 <a href="pyloc2.png"><img src="pyloc2_th.png"></a>
@@ -33,7 +35,14 @@ The source can be found on <a href="http://github.com/boothj5/pyloc">Github</a>
 <a href="pyloc3.png"><img src="pyloc3_th.png"></a>
 
 <a href="pyloc4.png"><img src="pyloc4_th.png"></a>
+-->
+<a href="pyloc1.png"><img src="pyloc1.png"></a>
 
+<a href="pyloc2.png"><img src="pyloc2.png"></a>
+
+<a href="pyloc3.png"><img src="pyloc3.png"></a>
+
+<a href="pyloc4.png"><img src="pyloc4.png"></a>
 <h4>Adding new languages</h4>
 
 To add support for a new language, edit languages.py.  Add a string value representing the
