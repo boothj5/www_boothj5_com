@@ -7,9 +7,9 @@
 <body bgcolor="FFFBFB">
 <!--#include file="headerfooter.html" -->
 <hr>
-<center>
+<header>
 <h1><b>Profanity</h1> </b>
-</center>
+</header>
 
 <p>
 Profanity is a simple Jabber client written in C using <a href="http://www.gnu.org/software/ncurses/">ncurses</a> and <a href="http://strophe.im/libstrophe/">libstrophe</a>, inspired by <a href="http://irssi.org/">Irssi</a>.

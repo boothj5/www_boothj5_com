@@ -15,10 +15,13 @@
 <h1><b>Boothj5 Home</h1> </b>
 </header>
 
+<p>
 Full time Software Developer, part time hacker.
+</p>
 
 <h4>Projects</h4>
 
+<p>
 <ul>
 <li>
 <a href="profanity.shtml">Profanity</a>
@@ -27,9 +30,14 @@ Full time Software Developer, part time hacker.
 <li>
 <a href="pyloc.shtml">Pyloc</a>
 </ul>
+</p>
 
 <p>
 <b>Email:</b>&nbsp;<span class="backwards">moc.liamg@bew5jhtoob</span>
+</p>
+
+<p>
+Thanks to <a href="http://www.matthewbalaam.co.uk">Matthew Balaam</a> for giving my site a little style.
 </p>
 
 <hr>

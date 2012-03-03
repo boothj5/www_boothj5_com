@@ -79,9 +79,9 @@ body .il { color: #666666 } /* Literal.Number.Integer.Long */
 <body bgcolor="FFFBFB">
 <!--#include file="headerfooter.html" -->
 <hr>
-<center>
+<header>
 <h1>Head-Unit</h1>
-</center>
+</header>
 
 <p>
 Head-Unit is a small unit testing framework for C and C++, written in C.

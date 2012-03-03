@@ -12,9 +12,9 @@
 <body bgcolor="FFFBFB">
 <!--#include file="headerfooter.html" -->
 <hr>
-<center>
+<header>
 <h1><b>Pyloc</h1> </b>
-</center>
+</header>
 
 <p>
 Pyloc is a Lines Of Code analyser written in Python. Supported languages are configurable. 
