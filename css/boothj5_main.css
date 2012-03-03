@@ -274,14 +274,13 @@ border-bottom: 1px dotted white;
 
 header {
 border-bottom: 1px solid white;
-padding-top: 30px;
 padding-left: 10%;
 position: fixed;
 right: 0%;
 top: 0px;
 width: 100%;
 background: #222;
-height: 60px;
+height: 90px;
 z-index: 50;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#555555), to(#000000)); /* Saf4+, Chrome */
   background-image: -webkit-linear-gradient(top, #555555, #000000); /* Chrome 10+, Saf5.1+, iOS 5+ */
@@ -293,18 +292,33 @@ z-index: 50;
 
 header h1 {
 position: fixed;
-top: 40px;
+top: 30px;
 left: 10%;
 z-index: +1;
 color: #848;
 font-size: 35px;
-margin-left;
 color: #0f0;
 font-family: monospace}
 
-h4 {
-margin: 100px 0px 40px;
+header p {
+  position: fixed;
+  color: #151;
+  top: 60px;
+left: 10%;
+font-weight: 100;
+}
+
+h2 {
 font-size: 35px;
+padding: 20px 0 80px;
+color: #050;
+}
+
+h4 {
+margin: 10px 0px 40px;
+font-size: 35px;
+font-weight: 100;
+color: #999
 
 }
 
@@ -361,29 +375,20 @@ p {
     margin-bottom: 10px;
 }
 
-/*:nth-child(2) a img {
-opacity: 0.2;
-}
--moz-transform-origin: -100% 100%;
-  -webkit-transform-origin: -100%  100%;
-  -o-transform-origin: -100% 100%;
-  -ms-transform-origin: -100% 100%;
-  transform-origin: -100%  100%;
-}
-*/
 
 @media screen and (max-width:800px) {
   header {
-    height: 100px;
+    height: 150px;
    }
 
-header h1 {
+header h1, header p{
   left: 18%;
   }
 
+
 nav {;
-  width: 100%;
-  top: 90px;
+  width: 95%;
+  top: 110px;
   left: 5%;
   }
 
@@ -391,9 +396,13 @@ nav a {
   float: left;
 }
 
-header, header h1, nav {
+header, header h1, header p, nav {
   position: absolute;
   }
+
+#Content {
+padding-top: 70px;
+}
 
 }
 
