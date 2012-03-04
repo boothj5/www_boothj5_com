@@ -8,6 +8,7 @@
 -->
 </style>
 <link href="css/boothj5_main.css" type="text/css" rel="stylesheet"/>
+<link href="css/python-code.css" type="text/css" rel="stylesheet"/>
 <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700' rel='stylesheet' type='text/css'>
 
 </head>
@@ -34,43 +35,50 @@ Requires Python 2.6+ and <a href="http://www.wxpython.org/">WxPython</a> to run 
 <h4>Adding new languages</h4>
 
 To add support for a new language, edit languages.py.  Add a string value representing the
-language:
+language and the definition to the language dictionary:
 
-<pre class="tab">
-LUA = "Lua"
-</pre> 
+<div class="tabcode">
+<div class="highlight"><pre><span class="n">LUA</span> <span class="o">=</span> <span class="s">&quot;Lua&quot;</span>
 
-Add the definition:
-
-<pre class="tab">
-LUA :
-  { EXTENSIONS:    [ ".lua" ] ,
-    LINECOMMENTS:  "--" ,
-    BLOCKCOMMENTS: [ ( "--[[" , "]]" ) ] }
+<span class="n">LUA</span> <span class="p">:</span>
+    <span class="p">{</span> <span class="n">EXTENSIONS</span><span class="p">:</span>    <span class="p">[</span> <span class="s">&quot;.lua&quot;</span> <span class="p">]</span> <span class="p">,</span>
+      <span class="n">LINECOMMENTS</span><span class="p">:</span>  <span class="s">&quot;--&quot;</span> <span class="p">,</span>
+      <span class="n">BLOCKCOMMENTS</span><span class="p">:</span> <span class="p">[</span> <span class="p">(</span> <span class="s">&quot;--[[&quot;</span> <span class="p">,</span> <span class="s">&quot;]]&quot;</span> <span class="p">)</span> <span class="p">]</span> <span class="p">}</span> <span class="p">}</span>
 </pre>
+</div>
+</div>
 
-Where:
+<p>
+Where the string represnets the name of the language, and the dictionary entries represent:
+</p>
 
+<p>
 <ol>
 <li>EXTENSIONS is a comma seperated list of file extensions.</li>
 <li>LINECOMMENTS (optional) is a string representing characters used for line comments.</li>
 <li>BLOCKCOMMENTS (optional) is a comma seperated list of pairs of begin and end block comment strings.</li>
 </ol>
-
+</p>
 
 <h4>Running</h4>
 
 Pyloc can either be run as a desktop GUI:
 
-<pre class="tab">
+<div class="tabcode">
+<pre>
 ./pyloc.py
 </pre>
+</div>
 
+<p>
 Or as a terminal application by calling pylocstats.py directly:
+</p>
 
-<pre class="tab">
+<div class="tabcode">
+<pre>
 Usage: pylocstats.py directory [-v]
 </pre>
+</div>
 
 Where 'directory' is the directory to scan and -v will cause verbose output.
 
