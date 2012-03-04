@@ -87,9 +87,6 @@ body .il { color: #666666 } /* Literal.Number.Integer.Long */
 <p>
 Head-Unit is a small unit testing framework for C and C++, written in C.
 
-<h4>Source</h4>
-The source can be found on <a href="http://github.com/boothj5/head-unit">Github</a>
-
 <h4>Using head-unit</h4>
 Basic steps are:
 
@@ -251,6 +248,9 @@ test: compile-tests
     ./testsuite
 </pre>
 
+
+<h4>Source</h4>
+The source can be found on <a href="http://github.com/boothj5/head-unit">Github</a>
 
 
 <hr>
