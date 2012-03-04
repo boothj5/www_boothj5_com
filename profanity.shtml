@@ -14,19 +14,12 @@
 <p>
 Profanity is a simple Jabber client written in C using <a href="http://www.gnu.org/software/ncurses/">ncurses</a> and <a href="http://strophe.im/libstrophe/">libstrophe</a>, inspired by <a href="http://irssi.org/">Irssi</a>.
 
-<h4>Source</h4>
-
-The source can be found on <a href="http://github.com/boothj5/profanity">Github</a>
-
 <h4>Screenshots</h4>
-<!--
-<a href="prof1.png"><img src="prof1_th.png"></a>
 
-<a href="prof2.png"><img src="prof2_th.png"></a>
--->
+<p>Click an image to load the fullsize version.</p>
 <a href="prof1.png"><img src="prof1.png"></a>
-
 <a href="prof2.png"><img src="prof2.png"></a>
+
 <h4>Features</h4>
 
 <ul>
@@ -36,6 +29,10 @@ The source can be found on <a href="http://github.com/boothj5/profanity">Github<
 <li>Up to 9 active chat windows</li>
 <li>Sending of random control characters to recipient on window resize</li>
 </ul>
+
+<h4>Source</h4>
+
+The source can be found on <a href="http://github.com/boothj5/profanity">Github</a>
 
 <hr>
 

@@ -22,20 +22,8 @@ Stats are broken down in to code, comments and whitespace, with Physical SLOC in
 <p>
 Requires Python 2.6+ and <a href="http://www.wxpython.org/">WxPython</a> to run the GUI.
 
-<h4>Source</h4>
-
-The source can be found on <a href="http://github.com/boothj5/pyloc">Github</a>
-
 <h4>Screenshots</h4>
-<!--
-<a href="pyloc1.png"><img src="pyloc1_th.png"></a>
-
-<a href="pyloc2.png"><img src="pyloc2_th.png"></a>
-
-<a href="pyloc3.png"><img src="pyloc3_th.png"></a>
-
-<a href="pyloc4.png"><img src="pyloc4_th.png"></a>
--->
+<p>Click an image to load the fullsize version.</p>
 <a href="pyloc1.png"><img src="pyloc1.png"></a>
 
 <a href="pyloc2.png"><img src="pyloc2.png"></a>
@@ -85,6 +73,10 @@ Usage: pylocstats.py directory [-v]
 </pre>
 
 Where 'directory' is the directory to scan and -v will cause verbose output.
+
+<h4>Source</h4>
+
+The source can be found on <a href="http://github.com/boothj5/pyloc">Github</a>
 
 <hr>
 </div>
