@@ -377,20 +377,20 @@ display: inline-block;
 
 img:hover {
 
--moz-transform: scale(1.8, 1.8);
-  -webkit-transform: scale(2, 2);
-  -o-transform: scale(2, 2);
-  -ms-transform: scale(2, 2);
-  transform: scale(2, 2);
+  -moz-transform: scale(1.5, 1.5);
+  -webkit-transform: scale(1.5, 1.5);
+  -o-transform: scale(1.5, 1.5);
+  -ms-transform: scale(1.5, 1.5);
+  transform: scale(1.5, 1.5);
   -moz-transition: all 0.2s ease-in-out;
   -webkit-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
--moz-transform-origin: 30% 100%;
-  -webkit-transform-origin: 30% 100%;
-  -o-transform-origin: 30% 100%;
-  -ms-transform-origin: 30% 100%;
-  transform-origin: 30% 100%;
+  -moz-transform-origin: 50% 50%;
+  -webkit-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
 }
 
 p {
