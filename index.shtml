@@ -8,13 +8,13 @@
 </style>
 
 <link href="css/boothj5_main.css" type="text/css" rel="stylesheet"/>
+<link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700' rel='stylesheet' type='text/css'>
 
 </head>
 
 <body bgcolor="FFFBFB">
 <!--#include file="headerfooter.html" -->
 <div id="Content"/>
-<h2><b>Boothj5 Home</h2> </b>
 
 <h4>Projects</h4>
 
@@ -23,12 +23,12 @@
 <li>
 <a href="profanity.shtml">Profanity</a>
 <li>
-<a href="head-unit.shtml">Head-unit</a>
+<a href="head-unit.shtml">Head-Unit</a>
 <li>
 <a href="pyloc.shtml">Pyloc</a>
 </ul>
 </p>
-
+<br>
 <p>
 <b>Email:</b>&nbsp;<span class="backwards">moc.liamg@bew5jhtoob</span>
 </p>
