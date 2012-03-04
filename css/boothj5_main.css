@@ -310,6 +310,26 @@ header p {
   font-weight: 100;
 }
 
+header a:link {
+  color: #0f0; 
+  text-decoration: none;
+}
+
+header a:visited {
+  color: #0f0; 
+  text-decoration: none;
+}
+
+header a:hover {
+  color: #0f0; 
+  text-decoration: none;
+}
+
+header a:active {
+  color: #0f0; 
+  text-decoration: none;
+}
+
 h2 {
 font-size: 35px;
 padding: 20px 0 80px;
