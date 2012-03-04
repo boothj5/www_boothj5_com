@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Boothj5: Playing cards</title>
+<link href="css/boothj5_main.css" type="text/css" rel="stylesheet"/>
+<link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700' rel='stylesheet' type='text/css'>
+
+</head>
+<body bgcolor="FFFBFB">
+<!--#include file="headerfooter.html" -->
+<div id="Content"/>
+<h2><b>Playing Cards</h2> </b>
+
+<p>
+I enjoy learning about different programming languages and paradigms.  To get to grips with a language, I usually write the card game <a href="http://en.wikipedia.org/wiki/Shithead_(card_game)">shithead</a> with it.
+<p>
+
+The images link to the source code on Github, I'm always keen to help people learn about the same things, and also like to hear from those who can help me learn to write better code in a certain langauge.
+
+<h4>Versions of shithead</h4>
+
+<a href="https://github.com/boothj5/shithead"><img src="javahead500.png"></a>
+<a href="https://github.com/boothj5/haskellhead"><img src="haskellhead500.png"></a>
+<a href="https://github.com/boothj5/pythonhead"><img src="pythonhead500.png"></a>
+<a href="https://github.com/boothj5/c-head"><img src="c-head500.png"></a>
+<a href="https://github.com/boothj5/cpphead"><img src="cpphead500.png"></a>
+<a href="https://github.com/boothj5/lisphead"><img src="lisphead500.png"></a>
+<a href="https://github.com/boothj5/rubyhead"><img src="rubyhead500.png"></a>
+<a href="https://github.com/boothj5/smalltalkhead"><img src="smalltalkhead500.png"></a>
+<hr>
+
+</div>
+</body>
+
+</html>
+
