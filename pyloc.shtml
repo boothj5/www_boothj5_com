@@ -5,20 +5,24 @@
 <link href="css/boothj5_main.css" type="text/css" rel="stylesheet"/>
 <link href="css/python-code.css" type="text/css" rel="stylesheet"/>
 <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700' rel='stylesheet' type='text/css'>
-
+<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
 <body>
 <!--#include file="headerfooter.html" -->
 <div id="Content"/>
-<h2><b>Pyloc</h2> </b>
+<h2>Pyloc</h2> 
 
 <p>
 Pyloc is a Lines Of Code analyser written in Python. Supported languages are configurable. 
 Stats are broken down in to code, comments and whitespace, with Physical SLOC including everything.
+</p>
+
 <p>
 Requires Python 2.6+ and <a href="http://www.wxpython.org/">WxPython</a> to run the GUI.
+</p>
 
 <h4>Screenshots</h4>
+
 <p>Click an image to load the fullsize version.</p>
 <a href="pyloc1.png"><img src="pyloc1.png"></a>
 
@@ -29,8 +33,10 @@ Requires Python 2.6+ and <a href="http://www.wxpython.org/">WxPython</a> to run 
 <a href="pyloc4.png"><img src="pyloc4.png"></a>
 <h4>Adding new languages</h4>
 
+<p>
 To add support for a new language, edit languages.py.  Add a string value representing the
 language and the definition to the language dictionary:
+</p>
 
 <div class="tabcode">
 <div class="highlight"><pre><span class="n">LUA</span> <span class="o">=</span> <span class="s">&quot;Lua&quot;</span>
@@ -57,7 +63,9 @@ Where the string represnets the name of the language, and the dictionary entries
 
 <h4>Running</h4>
 
+<p>
 Pyloc can either be run as a desktop GUI:
+</p>
 
 <div class="tabcode">
 <pre>
@@ -75,11 +83,15 @@ Usage: pylocstats.py directory [-v]
 </pre>
 </div>
 
+<p>
 Where 'directory' is the directory to scan and -v will cause verbose output.
+</p>
 
 <h4>Source</h4>
 
+<p>
 The source can be found on <a href="http://github.com/boothj5/pyloc">Github</a>
+</p>
 
 <hr>
 </div>
