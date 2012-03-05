@@ -238,51 +238,60 @@ mark {
 
 //start styles here:
 
-hr {opacity: 0.1}
-
-html {}
-
-body {padding: 150px 10%;
-font-family: helvetica, arial, sans-serif;
-font-size: 15px;
-line-height: 20px;
-color: #666;
-background-color: #f8fef0;
+hr {
+  opacity: 0.1
 }
 
+body {
+  padding: 150px 10%;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 15px;
+  line-height: 20px;
+  color: #666;
+  background-color: #f8fef0;
+}
+
+p {
+  max-width: 575px}
+
 nav {
-position: fixed;
-right: 10%;
-top: 45px;
-width: 50%;
-margin: 0;
-z-index: 200;
+  position: fixed;
+  right: 10%;
+  top: 45px;
+  margin: 0;
+  z-index: 200;
+}
+
+nav ul {
+  float: right;
+}
+
+nav li {
+  margin-left: 20px;
+  float: left;
 }
 
 nav a{
-float: right;
-position: relative;
-margin-left: 5%;
-text-decoration: none;
-color: #eee;
-
+  text-decoration: none;
+  color: #eee;
 }
 
 nav a:hover {
-color: #fff;
-border-bottom: 1px dotted white;
+  color: #fff;
+  border-bottom: 1px dotted white;
 }
 
 header {
-border-bottom: 1px solid white;
-padding-left: 10%;
-position: fixed;
-right: 0%;
-top: 0px;
-width: 100%;
-background: #222;
-height: 90px;
-z-index: 50;
+  border-bottom: 1px solid white;
+  padding-left: 10%;
+  position: fixed;
+  right: 0%;
+  top: 0px;
+  width: 100%;
+  background: #222;
+  height: 90px;
+  z-index: 50;
+  background-color: black;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#555555), to(#000000)); /* Saf4+, Chrome */
   background-image: -webkit-linear-gradient(top, #555555, #000000); /* Chrome 10+, Saf5.1+, iOS 5+ */
   background-image:    -moz-linear-gradient(top, #555555, #000000); /* FF3.6 */
@@ -331,52 +340,48 @@ header a:active {
 }
 
 h2 {
-font-size: 35px;
-padding: 20px 0 80px;
-color: #050;
+  font-size: 35px;
+  padding: 20px 0 80px;
+  color: #050;
 }
 
 h4 {
-margin: 60px 0px 30px;
-font-size: 35px;
-font-weight: 100;
-color: #999
-
+  margin: 60px 0px 30px;
+  font-size: 35px;
+  font-weight: 100;
+  color: #999
 }
 
 div.tabcode {
-background-color: #111;
+  background-color: #111;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#333333), to(#000000)); /* Saf4+, Chrome */
   background-image: -webkit-linear-gradient(top, #333333, #000000); /* Chrome 10+, Saf5.1+, iOS 5+ */
   background-image:    -moz-linear-gradient(top, #333333, #000000); /* FF3.6 */
   background-image:     -ms-linear-gradient(top, #333333, #000000); /* IE10 */
   background-image:      -o-linear-gradient(top, #333333, #000000); /* Opera 11.10+ */
   background-image:         linear-gradient(to bottom, #333333, #000000);
-color: white;
-margin: 20px 0px;
-padding: 40px;
-border-radius: 15px;
+  color: white;
+  margin: 20px 0px;
+  padding: 40px;
+  border-radius: 15px;
   -moz-box-shadow:  0px 10px 5px #ddd;
   -webkit-box-shadow:  0px 10px 5px #ddd;
   -o-box-shadow:  0px 10px 5px #ddd;
   box-shadow:  0px 10px 5px #ddd;
-border: 3px solid #444
+  border: 3px solid #444
 }
 
 img, a img {
-   padding:4px;
-   border: 1px solid #bbb;
-   background-color:#fff;
-max-width: 50%;
-width: 40%;
-margin: 20px 5% 20px 0%;
-display: inline-block;
+  padding:4px;
+  border: 1px solid #bbb;
+  background-color:#fff;
+  max-width: 50%;
+  width: 40%;
+  margin: 20px 5% 20px 0%;
+  display: inline-block;
 }
 
-
-
 img:hover {
-
   -moz-transform: scale(1.5, 1.5);
   -webkit-transform: scale(1.5, 1.5);
   -o-transform: scale(1.5, 1.5);
@@ -394,38 +399,39 @@ img:hover {
 }
 
 p {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
-
 @media screen and (max-width:800px) {
+
   header {
     height: 150px;
    }
 
-header h1, header p{
-  left: 18%;
+  header h1, header p{
+    left: 18%;
   }
 
-
-nav {;
-  width: 95%;
-  top: 110px;
-  left: 5%;
+  nav {;
+    width: 95%;
+    top: 110px;
+    left: 10%;
   }
 
-nav a {
-  float: left;
-}
-
-header, header h1, header p, nav {
-  position: absolute;
+  nav ul {
+    float: left;
   }
 
-#Content {
-padding-top: 70px;
-}
+  nav li {
+    margin: 0 20px 0 0;
+  }
+
+  header, header h1, header p, nav {
+    position: absolute;
+  }
+
+  #Content {
+  padding-top: 70px;
+  }
 
 }
-
-

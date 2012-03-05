@@ -16,16 +16,19 @@
 
 <p>
 Head-Unit is a small unit testing framework for C and C++, written in C.
+</p>
 
 <h4>Using head-unit</h4>
-Basic steps are:
 
+<p>
+Basic steps are:
 <ol>
 <li>Write the tests</li>
 <li>Register the tests in a test module</li>
 <li>Register the test modules in a testsuite</li>
 <li>Run the testsuite</li>
 </ol>
+</p>
 
 <h4>C asserts</h4>
 <div class="tabcode">
@@ -42,7 +45,8 @@ Basic steps are:
 </pre></div>
 </div>
 
-<br>Where T must implement the following:<br><br>
+<p>Where T must implement the following:
+</p>
 
 <div class="tabcode">
 <div class="highlight"><pre><span class="kt">bool</span> <span class="n">T</span><span class="o">::</span><span class="k">operator</span><span class="o">==</span><span class="p">(</span><span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">other</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
@@ -52,8 +56,8 @@ Basic steps are:
 </div>
 
 <h4>Write a test module</h4>
-some-tests.c:
-<br><br>
+<p>some-tests.c:</p>
+
 
 <div class="tabcode">
 <div class="highlight"><pre><span class="cp">#include &lt;string.h&gt;</span>
@@ -105,16 +109,16 @@ some-tests.c:
 <span class="p">}</span>
 </pre></div>
 </div>
-<br>
-The use of static is optional but stops tests with similar names in different source files conflicting.
+
+<p>The use of static is optional but stops tests with similar names in different source files conflicting.</p>
 <p>
 The register function must not be static.
+</p>
 <p>
 The SETUP, BEFORETEST, AFTERTEST and TEARDOWN functions and equivalent macros are optional.
-
+</p>
 <h4>Create the testsuite header and source file</h4>
-testsuite.h:
-<br><br>
+<p>testsuite.h:</p>
 <div class="tabcode">
 <div class="highlight"><pre><span class="cp">#ifndef TESTSUITE_H</span>
 <span class="cp">#define TESTSUITE_H</span>
@@ -125,9 +129,9 @@ testsuite.h:
 <span class="cp">#endif</span>
 </pre></div>
 </div>
-<br>
+<p>
 testsuite.c:
-<br><br>
+</p>
 <div class="tabcode">
 <div class="highlight"><pre><span class="cp">#include &lt;head-unit.h&gt;</span>
 <span class="cp">#include &quot;testsuite.h&quot;</span>
@@ -141,11 +145,10 @@ testsuite.c:
 <span class="p">}</span>
 </pre></div>
 </div>
-<br>
 
 <h4>Build and run the tests</h4>
 
-C compiler flags:
+<p>C compiler flags:</p>
 
 <div class="tabcode">
 <pre>

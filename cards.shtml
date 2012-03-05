@@ -13,9 +13,11 @@
 
 <p>
 I enjoy learning about different programming languages and paradigms.  To get to grips with a language, I usually write the card game <a href="http://en.wikipedia.org/wiki/Shithead_(card_game)">shithead</a> with it.
-<p>
+</p>
 
+<p>
 I also enjoy sharing what I've learnt with anyone interested, and hearing from those well versed in the languages I'm exploring.
+</p>
 
 <h4>Versions of shithead</h4>
 
@@ -29,6 +31,7 @@ I also enjoy sharing what I've learnt with anyone interested, and hearing from t
 <a href="https://github.com/boothj5/lisphead"><img src="lisphead500.png"></a>
 <a href="https://github.com/boothj5/rubyhead"><img src="rubyhead500.png"></a>
 <a href="https://github.com/boothj5/smalltalkhead"><img src="smalltalkhead500.png"></a>
+
 <hr>
 
 </div>
