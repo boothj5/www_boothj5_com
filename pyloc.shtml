@@ -7,7 +7,7 @@
 <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700' rel='stylesheet' type='text/css'>
 
 </head>
-<body bgcolor="FFFBFB">
+<body>
 <!--#include file="headerfooter.html" -->
 <div id="Content"/>
 <h2><b>Pyloc</h2> </b>
