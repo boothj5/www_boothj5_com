@@ -30,30 +30,6 @@ Basic steps are:
 </ol>
 </p>
 
-<h4>C asserts</h4>
-<div class="tabcode">
-<div class="highlight"><pre><span class="n">assert_true</span><span class="p">(</span><span class="kt">int</span> <span class="n">expression</span><span class="p">);</span>
-<span class="n">assert_false</span><span class="p">(</span><span class="kt">int</span> <span class="n">expression</span><span class="p">);</span>
-<span class="n">assert_int_equals</span><span class="p">(</span><span class="kt">int</span> <span class="n">expected</span><span class="p">,</span> <span class="kt">int</span> <span class="n">actual</span><span class="p">);</span>
-<span class="n">assert_string_equals</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="n">expected</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">actual</span><span class="p">);</span>
-</pre></div>
-</div>
-
-<h4>C++ asserts</h4>
-<div class="tabcode">
-<div class="highlight"><pre><span class="n">assert_equals</span><span class="p">(</span><span class="n">T</span> <span class="n">expected</span><span class="p">,</span> <span class="n">T</span> <span class="n">actual</span><span class="p">);</span>
-</pre></div>
-</div>
-
-<p>Where T must implement the following:
-</p>
-
-<div class="tabcode">
-<div class="highlight"><pre><span class="kt">bool</span> <span class="n">T</span><span class="o">::</span><span class="k">operator</span><span class="o">==</span><span class="p">(</span><span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">other</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
-<span class="kt">bool</span> <span class="n">T</span><span class="o">::</span><span class="k">operator</span><span class="o">!=</span><span class="p">(</span><span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">other</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
-<span class="n">ostream</span><span class="o">&amp;</span> <span class="k">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">strm</span><span class="p">,</span> <span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">obj</span><span class="p">);</span>
-</pre></div>
-</div>
 
 <h4>Write a test module</h4>
 <p>some-tests.c:</p>
@@ -194,6 +170,31 @@ test: compile-tests
 </pre>
 </div>
 
+<h4>C asserts</h4>
+<div class="tabcode">
+<div class="highlight"><pre><span class="n">assert_true</span><span class="p">(</span><span class="kt">int</span> <span class="n">expression</span><span class="p">);</span>
+<span class="n">assert_false</span><span class="p">(</span><span class="kt">int</span> <span class="n">expression</span><span class="p">);</span>
+<span class="n">assert_int_equals</span><span class="p">(</span><span class="kt">int</span> <span class="n">expected</span><span class="p">,</span> <span class="kt">int</span> <span class="n">actual</span><span class="p">);</span>
+<span class="n">assert_string_equals</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="n">expected</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">actual</span><span class="p">);</span>
+<span class="n">assert_is_null</span><span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="n">ptr</span><span class="p">);</span>
+</pre></div>
+</div>
+
+<h4>C++ asserts</h4>
+<div class="tabcode">
+<div class="highlight"><pre><span class="n">assert_equals</span><span class="p">(</span><span class="n">T</span> <span class="n">expected</span><span class="p">,</span> <span class="n">T</span> <span class="n">actual</span><span class="p">);</span>
+</pre></div>
+</div>
+
+<p>Where T must implement the following:
+</p>
+
+<div class="tabcode">
+<div class="highlight"><pre><span class="kt">bool</span> <span class="n">T</span><span class="o">::</span><span class="k">operator</span><span class="o">==</span><span class="p">(</span><span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">other</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+<span class="kt">bool</span> <span class="n">T</span><span class="o">::</span><span class="k">operator</span><span class="o">!=</span><span class="p">(</span><span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">other</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+<span class="n">ostream</span><span class="o">&amp;</span> <span class="k">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">strm</span><span class="p">,</span> <span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">obj</span><span class="p">);</span>
+</pre></div>
+</div>
 <h4>Source</h4>
 The source can be found on <a href="http://github.com/boothj5/head-unit">Github</a>
 
