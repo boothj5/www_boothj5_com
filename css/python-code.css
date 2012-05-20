@@ -6,7 +6,7 @@ body .hll { background-color: #ffffcc }
 body .c { color: #408080; font-style: italic } /* Comment */
 body .err { border: 1px solid #FF0000 } /* Error */
 body .k { color: #008000; font-weight: bold } /* Keyword */
-body .o { color: #666666 } /* Operator */
+body .o { color: #FFFFFF } /* Operator */
 body .cm { color: #408080; font-style: italic } /* Comment.Multiline */
 body .cp { color: #BC7A00 } /* Comment.Preproc */
 body .c1 { color: #408080; font-style: italic } /* Comment.Single */
@@ -28,7 +28,7 @@ body .kp { color: #008000 } /* Keyword.Pseudo */
 body .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
 body .kt { color: #B00040 } /* Keyword.Type */
 body .m { color: #666666 } /* Literal.Number */
-body .s { color: #BA2121 } /* Literal.String */
+body .s { color: #FF00FF } /* Literal.String */
 body .na { color: #7D9029 } /* Name.Attribute */
 body .nb { color: #008000 } /* Name.Builtin */
 body .nc { color: #0000FF; font-weight: bold } /* Name.Class */
