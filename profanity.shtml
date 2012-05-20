@@ -25,11 +25,12 @@ Profanity is a simple Jabber client written in C using <a href="http://www.gnu.o
 <h4>Features</h4>
 
 <ul>
-<li>XMPP chat</li>
-<li>Enable/disable TLS</li>
+<li>XMPP chat, Jabber, GTalk</li>
+<li>Disable TLS for servers that don't support it</li>
 <li>Console window for logging</li>
 <li>Up to 9 active chat windows</li>
-<li>Sending of random control characters to recipient on window resize</li>
+<li>Customisation with preferences file<li>
+<li>Autcomplete names of online contact<li>
 </ul>
 
 <h4>Source</h4>
