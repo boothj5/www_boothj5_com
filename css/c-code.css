@@ -7,11 +7,11 @@ body .hll { background-color: #ffffcc }
 /*body  { background: #fffbfb; }*/
 body .c { color: #408080; font-style: italic } /* Comment */
 body .err { border: 1px solid #FF0000 } /* Error */
-body .k { color: #008000; font-weight: bold } /* Keyword */
-body .o { color: #666666 } /* Operator */
+body .k { color: #11FF11; } /* Keyword */
+body .o { color: #FFFFFF } /* Operator */
 body .cm { color: #408080; font-style: italic } /* Comment.Multiline */
-body .cp { color: #BC7A00 } /* Comment.Preproc */
-body .c1 { color: #408080; font-style: italic } /* Comment.Single */
+body .cp { color: #FF00FF } /* Comment.Preproc */
+body .c1 { color: #00FFFF; font-style: italic } /* Comment.Single */
 body .cs { color: #408080; font-style: italic } /* Comment.Special */
 body .gd { color: #A00000 } /* Generic.Deleted */
 body .ge { font-style: italic } /* Generic.Emph */
@@ -28,9 +28,9 @@ body .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
 body .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
 body .kp { color: #008000 } /* Keyword.Pseudo */
 body .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
-body .kt { color: #B00040 } /* Keyword.Type */
+body .kt { color: #11FF11 } /* Keyword.Type */
 body .m { color: #666666 } /* Literal.Number */
-body .s { color: #BA2121 } /* Literal.String */
+body .s { color: #FF00FF } /* Literal.String */
 body .na { color: #7D9029 } /* Name.Attribute */
 body .nb { color: #008000 } /* Name.Builtin */
 body .nc { color: #0000FF; font-weight: bold } /* Name.Class */
@@ -38,7 +38,7 @@ body .no { color: #880000 } /* Name.Constant */
 body .nd { color: #AA22FF } /* Name.Decorator */
 body .ni { color: #999999; font-weight: bold } /* Name.Entity */
 body .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
-body .nf { color: #0000FF } /* Name.Function */
+body .nf { color: #FFFFFF } /* Name.Function */
 body .nl { color: #A0A000 } /* Name.Label */
 body .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
 body .nt { color: #008000; font-weight: bold } /* Name.Tag */
@@ -47,7 +47,7 @@ body .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
 body .w { color: #bbbbbb } /* Text.Whitespace */
 body .mf { color: #666666 } /* Literal.Number.Float */
 body .mh { color: #666666 } /* Literal.Number.Hex */
-body .mi { color: #666666 } /* Literal.Number.Integer */
+body .mi { color: #FF00FF } /* Literal.Number.Integer */
 body .mo { color: #666666 } /* Literal.Number.Oct */
 body .sb { color: #BA2121 } /* Literal.String.Backtick */
 body .sc { color: #BA2121 } /* Literal.String.Char */
