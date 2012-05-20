@@ -30,7 +30,7 @@ Profanity is a simple Jabber client written in C using <a href="http://www.gnu.o
 <li>Console window for logging</li>
 <li>Up to 9 active chat windows</li>
 <li>Customisation with preferences file<li>
-<li>Autcomplete names of online contact<li>
+<li>Autcomplete names of online contacts<li>
 </ul>
 
 <h4>Source</h4>
