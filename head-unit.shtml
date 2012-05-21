@@ -18,6 +18,32 @@
 Head-Unit is a small unit testing framework for C and C++, written in C.
 </p>
 
+<h4>Installing head-unit</h4>
+
+<p>
+In the project folder, run:
+<p>
+
+<div class="tabcode">
+<pre>
+make install
+</pre>
+</div>
+
+<p>
+This will install head-unit in <b>~/lib</b> and <b>~/include</b>.
+</p>
+
+<p>
+Alternatively you can download and install the debian binary package from <a href="libheadunit_0.11-1_amd64.deb">here</a> by running:
+<p>
+
+<div class="tabcode">
+<pre>
+sudo dpkg -i libheadunit_0.11-1_amd64.deb
+</pre>
+</div>
+
 <h4>Using head-unit</h4>
 
 <p>
