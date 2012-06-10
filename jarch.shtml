@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Boothj5: JArch</title>
+<meta http-equiv="content-type" content="text/html; charset=latin1">
+<meta name="viewport" content="width=device-width">
+<link href="css/boothj5_main.css" type="text/css" rel="stylesheet"/>
+<link href="css/xml-code.css" type="text/css" rel="stylesheet"/>
+<link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700' rel='stylesheet' type='text/css'>
+<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+<body>
+<!--#include file="headerfooter.html" -->
+<div id="Content"/>
+<h2><b>JArch</h2> </b>
+
+<p>
+JArch is a tool to verify the modularity and layering of Java source code.  In summary, a glorified package dependency analyser.
+</p>
+
+<p>
+In more detail, it allows you to specify rules about the dependencies between major components, functional areas and layers of your application, it will check them, and inform you of problems.
+</p>
+
+<p>
+Its particulary suited to enterprise applications, built with Spring or JEE where functional areas and layering are central.
+</p>
+
+<p>
+It is based loosley on <a href="http://japan.sourceforge.net/">JAPAN</a>, but the code is written from scratch, with a focus on components, modules and layers.
+</p>
+
+<h4>Installation</h4>
+
+<p>
+Download from the downloads page at <a href="https://github.com/boothj5/jarch/downloads">GitHub</a>. jdom-2.0.1 is also required and can be downloaded at <a href="http://www.jdom.org/downloads/index.html">JDOM.org</a> .
+</p>
+
+<p>
+Put both in a directory available to your Ant build script or command line.
+</p>
+
+<h4>Running from the command line</h4>
+
+<p>
+To run straight from the command line (pointing to the jars on your system):
+</p>
+
+<div class="tabcode">
+<pre>
+java -cp dist/jarch-0.1.2.jar:lib/jdom-2.0.1.jar com.boothj5.jarch.cli.Main <source-path> <config-file>
+</pre>
+</div>
+
+<p>
+Where source-path is the path name to your java source code to be analysed, and config-file is the jarch configuration for your project, see below.
+</p>
+
+<h4>Running using the Ant task</h4>
+
+<p>
+Include the following in build.xml:
+</p>
+
+<div class="tabcode">
+<div class="highlight"><pre><span class="nt">&lt;taskdef</span> <span class="na">classname=</span><span class="s">&quot;com.boothj5.jarch.JArchTask&quot;</span> <span class="na">name=</span><span class="s">&quot;jarch&quot;</span> <span class="na">classpath=</span><span class="s">&quot;lib/build/jarch.jar:lib/build/jdom-2.0.1.jar&quot;</span><span class="nt">/&gt;</span>
+
+<span class="nt">&lt;target</span> <span class="na">name=</span><span class="s">&quot;jarch&quot;</span> <span class="nt">&gt;</span>
+    <span class="nt">&lt;jarch</span> <span class="na">sourcePath=</span><span class="s">&quot;src/project/java&quot;</span> <span class="na">jarchConfigFile=</span><span class="s">&quot;jarch-config.xml&quot;</span> <span class="na">failBuild=</span><span class="s">&quot;false&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/target&gt;</span>
+</pre></div>
+</div>
+
+<p>
+If the failBuild option is enabled JArch will consider any errors a build failure and Ant will exit, otherwise messages are shown and Ant will continue.
+</p>
+
+<h4>Configuration</h4>
+
+
+<div class="tabcode">
+<div class="highlight"><pre><span class="nt">&lt;jarch-config&gt;</span>
+
+    <span class="nt">&lt;layer-spec</span> <span class="na">name=</span><span class="s">&quot;spring&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;layer</span> <span class="na">name=</span><span class="s">&quot;controller&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;dependency</span> <span class="na">on=</span><span class="s">&quot;facade&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/layer&gt;</span>
+        <span class="nt">&lt;layer</span> <span class="na">name=</span><span class="s">&quot;facade&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;dependency</span> <span class="na">on=</span><span class="s">&quot;service&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/layer&gt;</span>
+        <span class="nt">&lt;layer</span> <span class="na">name=</span><span class="s">&quot;service&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;dependency</span> <span class="na">on=</span><span class="s">&quot;repository&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/layer&gt;</span>
+        <span class="nt">&lt;layer</span> <span class="na">name=</span><span class="s">&quot;repository&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;dependency</span> <span class="na">on=</span><span class="s">&quot;dao&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/layer&gt;</span>
+        <span class="nt">&lt;layer</span> <span class="na">name=</span><span class="s">&quot;dao&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/layer-spec&gt;</span>
+
+<span class="nt">&lt;rule-set</span> <span class="na">name=</span><span class="s">&quot;application-module-dependencies&quot;</span> <span class="na">base-package=</span><span class="s">&quot;com.boothj5.jarchexample.application&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;module</span> <span class="na">name=</span><span class="s">&quot;common&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;module</span> <span class="na">name=</span><span class="s">&quot;address&quot;</span> <span class="na">layer-spec=</span><span class="s">&quot;spring&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;dependency</span> <span class="na">on=</span><span class="s">&quot;common&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/module&gt;</span>
+        <span class="nt">&lt;module</span> <span class="na">name=</span><span class="s">&quot;telephonenumber&quot;</span> <span class="na">layer-spec=</span><span class="s">&quot;spring&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;dependency</span> <span class="na">on=</span><span class="s">&quot;common&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/module&gt;</span>
+        <span class="nt">&lt;module</span> <span class="na">name=</span><span class="s">&quot;person&quot;</span> <span class="na">layer-spec=</span><span class="s">&quot;spring&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;dependency</span> <span class="na">on=</span><span class="s">&quot;common&quot;</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;dependency</span> <span class="na">on=</span><span class="s">&quot;address&quot;</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;dependency</span> <span class="na">on=</span><span class="s">&quot;telephonenumber&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/module&gt;</span>
+    <span class="nt">&lt;/rule-set&gt;</span>
+
+    <span class="nt">&lt;rule-set</span> <span class="na">name=</span><span class="s">&quot;project-dependencies&quot;</span> <span class="na">base-package=</span><span class="s">&quot;com.boothj5.jarchexample&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;module</span> <span class="na">name=</span><span class="s">&quot;common&quot;</span><span class="nt">/&gt;</span>    
+        <span class="nt">&lt;module</span> <span class="na">name=</span><span class="s">&quot;dto&quot;</span><span class="nt">&gt;</span>    
+            <span class="nt">&lt;dependency</span> <span class="na">on=</span><span class="s">&quot;common&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/module&gt;</span>    
+        <span class="nt">&lt;module</span> <span class="na">name=</span><span class="s">&quot;configuration&quot;</span> <span class="na">layer-spec=</span><span class="s">&quot;spring&quot;</span><span class="nt">&gt;</span>    
+            <span class="nt">&lt;dependency</span> <span class="na">on=</span><span class="s">&quot;common&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/module&gt;</span>
+        <span class="nt">&lt;module</span> <span class="na">name=</span><span class="s">&quot;domain&quot;</span><span class="nt">&gt;</span>    
+            <span class="nt">&lt;dependency</span> <span class="na">on=</span><span class="s">&quot;common&quot;</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;dependency</span> <span class="na">on=</span><span class="s">&quot;dto&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/module&gt;</span>    
+        <span class="nt">&lt;module</span> <span class="na">name=</span><span class="s">&quot;application&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;dependency</span> <span class="na">on=</span><span class="s">&quot;common&quot;</span><span class="nt">/&gt;</span>    
+            <span class="nt">&lt;dependency</span> <span class="na">on=</span><span class="s">&quot;configuration&quot;</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;dependency</span> <span class="na">on=</span><span class="s">&quot;domain&quot;</span><span class="nt">/&gt;</span>
+            <span class="nt">&lt;dependency</span> <span class="na">on=</span><span class="s">&quot;dto&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/module&gt;</span>    
+    <span class="nt">&lt;/rule-set&gt;</span>
+
+<span class="nt">&lt;/jarch-config&gt;</span>
+</pre></div>
+</div>
+
+<p>
+The layer-spec defines a layering which can be referenced by modules. If a module references the layer spec it is validated against that spec. I.e. JArch will look for packages with names matching layer elements within the module.
+If it finds any it will check that your layers only call each other as you've specified in the dependencies of each layer.
+</p>
+
+<p>
+A rule-set is a bunch of package dependency rules within a particular package. It is a list of module elements representing sub-packages each with an optional layer-spec attribute, and a set of depdendencies to validate.
+</p>
+
+<p>
+If JArch finds that you've made a call to another module that isn't defined in the caller module's dependencies, a message is ouput.
+</p>
+
+<p>
+The config file is validated first and will show errors when a non exitent module or layer-spec is specified, and show Warnings when circular module dependencies are specified.
+</p>
+
+<h4>Example output</h4>
+
+<div class="tabcode">
+<pre>
+JArch - Java Architecture checker.
+
+Source path: /home/james/projects-git/jarch/test/resources/invalid
+Config file: /home/james/projects-git/jarch/test/resources/jarch-config.xml
+
+--> Analysing rule-set "application-module-dependencies".
+
+MODULE: "common" must not import from "person"
+  -> com.boothj5.jarchexample.application.common.StringUtil:
+         Line 5: import com.boothj5.jarchexample.application.person.service.PersonService;
+
+MODULE: "address" must not import from "person"
+  -> com.boothj5.jarchexample.application.address.facade.AddressFacade:
+         Line 7: import com.boothj5.jarchexample.application.person.service.PersonService;
+
+MODULE: "address" must not import from "telephonenumber"
+  -> com.boothj5.jarchexample.application.address.facade.AddressFacade:
+         Line 8: import com.boothj5.jarchexample.application.telephonenumber.service.TelephoneNumberService;
+
+LAYER: "controller" must not import from "service" in module "telephonenumber" according to layer-spec "spring"
+  -> com.boothj5.jarchexample.application.telephonenumber.controller.TelephoneNumberController:
+         Line 7: import com.boothj5.jarchexample.application.telephonenumber.service.TelephoneNumberService;
+
+LAYER: "dao" must not import from "controller" in module "telephonenumber" according to layer-spec "spring"
+  -> com.boothj5.jarchexample.application.telephonenumber.dao.TelephoneNumberDAO:
+         Line 6: import com.boothj5.jarchexample.application.telephonenumber.controller.TelephoneNumberController;
+
+LAYER: "controller" must not import from "service" in module "person" according to layer-spec "spring"
+  -> com.boothj5.jarchexample.application.person.controller.PersonController:
+         Line 7: import com.boothj5.jarchexample.application.person.service.PersonService;
+
+LAYER: "controller" must not import from "repository" in module "person" according to layer-spec "spring"
+  -> com.boothj5.jarchexample.application.person.controller.PersonController:
+         Line 8: import com.boothj5.jarchexample.application.person.repository.PersonRepository;
+
+LAYER: "controller" must not import from "dao" in module "person" according to layer-spec "spring"
+  -> com.boothj5.jarchexample.application.person.controller.PersonController:
+         Line 9: import com.boothj5.jarchexample.application.person.dao.PersonDAO;
+
+--> Analysing rule-set "project-dependencies".
+
+MODULE: "common" must not import from "application"
+  -> com.boothj5.jarchexample.common.DateUtil:
+         Line 5: import com.boothj5.jarchexample.application.common.StringUtil;
+
+MODULE: "common" must not import from "domain"
+  -> com.boothj5.jarchexample.common.DateUtil:
+         Line 6: import com.boothj5.jarchexample.domain.Person;
+
+MODULE: "common" must not import from "dto"
+  -> com.boothj5.jarchexample.common.DateUtil:
+         Line 7: import com.boothj5.jarchexample.dto.PersonDTO;
+
+MODULE: "common" must not import from "configuration"
+  -> com.boothj5.jarchexample.common.DateUtil:
+         Line 8: import com.boothj5.jarchexample.configuration.controller.ConfigurationController;
+
+MODULE: "dto" must not import from "application"
+  -> com.boothj5.jarchexample.dto.PersonDTO:
+         Line 4: import com.boothj5.jarchexample.application.common.StringUtil;
+
+MODULE: "dto" must not import from "domain"
+  -> com.boothj5.jarchexample.dto.PersonDTO:
+         Line 5: import com.boothj5.jarchexample.domain.Person;
+
+MODULE: "dto" must not import from "configuration"
+  -> com.boothj5.jarchexample.dto.PersonDTO:
+         Line 7: import com.boothj5.jarchexample.configuration.controller.ConfigurationController;
+
+LAYER: "controller" must not import from "service" in module "configuration" according to layer-spec "spring"
+  -> com.boothj5.jarchexample.configuration.controller.ConfigurationController:
+         Line 7: import com.boothj5.jarchexample.configuration.service.ConfigurationService;
+
+LAYER: "controller" must not import from "repository" in module "configuration" according to layer-spec "spring"
+  -> com.boothj5.jarchexample.configuration.controller.ConfigurationController:
+         Line 8: import com.boothj5.jarchexample.configuration.repository.ConfigurationRepository;
+
+LAYER: "controller" must not import from "dao" in module "configuration" according to layer-spec "spring"
+  -> com.boothj5.jarchexample.configuration.controller.ConfigurationController:
+         Line 9: import com.boothj5.jarchexample.configuration.dao.ConfigurationDAO;
+
+MODULE: "configuration" must not import from "application"
+  -> com.boothj5.jarchexample.configuration.service.ConfigurationService:
+         Line 7: import com.boothj5.jarchexample.application.common.StringUtil;
+
+MODULE: "configuration" must not import from "domain"
+  -> com.boothj5.jarchexample.configuration.service.ConfigurationService:
+         Line 8: import com.boothj5.jarchexample.domain.Person;
+
+MODULE: "configuration" must not import from "dto"
+  -> com.boothj5.jarchexample.configuration.service.ConfigurationService:
+         Line 9: import com.boothj5.jarchexample.dto.PersonDTO;
+
+MODULE: "domain" must not import from "application"
+  -> com.boothj5.jarchexample.domain.Person:
+         Line 6: import com.boothj5.jarchexample.application.common.StringUtil;
+
+MODULE: "domain" must not import from "configuration"
+  -> com.boothj5.jarchexample.domain.Person:
+         Line 7: import com.boothj5.jarchexample.configuration.controller.ConfigurationController;
+
+Module errors: 15
+Layer errors: 8
+</pre>
+</div>
+
+
+<h4>Source</h4>
+The source can be found on <a href="http://github.com/boothj5/jarch">Github</a>
+
+
+<hr>
+</div>
+</body>
+
+</html>
+
