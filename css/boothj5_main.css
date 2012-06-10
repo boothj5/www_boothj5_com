@@ -245,14 +245,11 @@ hr {
 body {
   padding: 150px 10%;
   font-family: helvetica, arial, sans-serif;
-  font-size: 15px;
-  line-height: 20px;
+  font-size: 18px;
+  line-height: 23px;
   color: #666;
   background-color: #f8fef0;
 }
-
-p {
-  max-width: 575px}
 
 nav {
   position: fixed;
@@ -267,6 +264,7 @@ nav ul {
 }
 
 nav li {
+  font-size: 15px;
   margin-left: 20px;
   float: left;
 }
@@ -312,6 +310,7 @@ font-family: 'Ubuntu Mono';
 }
 
 header p {
+  font-size: 15px;
   position: fixed;
   color: #282;
   top: 60px;
@@ -368,6 +367,8 @@ div.tabcode {
   -webkit-box-shadow:  0px 10px 5px #ddd;
   -o-box-shadow:  0px 10px 5px #ddd;
   box-shadow:  0px 10px 5px #ddd;
+  font-size: 15px;
+  line-height: 20px;
   border: 3px solid #444
 }
 
