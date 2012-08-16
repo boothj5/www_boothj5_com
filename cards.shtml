@@ -26,25 +26,21 @@
 <h2><b>Playing Cards</h2> </b>
 
 <p>
-I enjoy learning about different programming languages and paradigms.  To get to grips with a language, I usually write the card game <a href="http://en.wikipedia.org/wiki/Shithead_(card_game)">shithead</a> with it.
-</p>
-
-<p>
-I also enjoy sharing what I've learnt with anyone interested, and hearing from those well versed in the languages I'm exploring.
+I enjoy learning about different programming languages and paradigms.  To get to grips with a language, I usually write a simple console version of the card game <a href="http://en.wikipedia.org/wiki/Shithead_(card_game)" target="_blank">shithead</a> with it.
 </p>
 
 <h4>Versions of shithead</h4>
 
 <p>Click an image to go to the source on Github.</p>
 
-<a href="https://github.com/boothj5/shithead"><img src="javahead500.png"></a>
-<a href="https://github.com/boothj5/haskellhead"><img src="haskellhead500.png"></a>
-<a href="https://github.com/boothj5/pythonhead"><img src="pythonhead500.png"></a>
-<a href="https://github.com/boothj5/c-head"><img src="c-head500.png"></a>
-<a href="https://github.com/boothj5/cpphead"><img src="cpphead500.png"></a>
-<a href="https://github.com/boothj5/lisphead"><img src="lisphead500.png"></a>
-<a href="https://github.com/boothj5/rubyhead"><img src="rubyhead500.png"></a>
-<a href="https://github.com/boothj5/smalltalkhead"><img src="smalltalkhead500.png"></a>
+<a href="https://github.com/boothj5/shithead" target="_blank"><img src="javahead500.png"></a>
+<a href="https://github.com/boothj5/haskellhead" target="_blank"><img src="haskellhead500.png"></a>
+<a href="https://github.com/boothj5/pythonhead" target="_blank"><img src="pythonhead500.png"></a>
+<a href="https://github.com/boothj5/c-head" target="_blank"><img src="c-head500.png"></a>
+<a href="https://github.com/boothj5/cpphead" target="_blank"><img src="cpphead500.png"></a>
+<a href="https://github.com/boothj5/lisphead" target="_blank"><img src="lisphead500.png"></a>
+<a href="https://github.com/boothj5/rubyhead" target="_blank"><img src="rubyhead500.png"></a>
+<a href="https://github.com/boothj5/smalltalkhead" target="_blank"><img src="smalltalkhead500.png"></a>
 
 <hr>
 
