@@ -40,13 +40,13 @@ Its particulary suited to enterprise applications, built with Spring or JEE wher
 </p>
 
 <p>
-It is based loosley on <a href="http://japan.sourceforge.net/">JAPAN</a>, but the code is written from scratch, with a focus on components, modules and layers.
+It is based loosley on <a href="http://japan.sourceforge.net/" target="_blank">JAPAN</a>, but the code is written from scratch, with a focus on components, modules and layers.
 </p>
 
 <h4>Installation</h4>
 
 <p>
-Download from the downloads page at <a href="https://github.com/boothj5/jarch/downloads">GitHub</a>. jdom-2.0.1 is also required and can be downloaded at <a href="http://www.jdom.org/downloads/index.html">JDOM.org</a> .
+Download from the downloads page at <a href="https://github.com/boothj5/jarch/downloads" target="_blank">GitHub</a>. jdom-2.0.1 is also required and can be downloaded at <a href="http://www.jdom.org/downloads/index.html" target="_blank">JDOM.org</a> .
 </p>
 
 <p>
@@ -278,7 +278,7 @@ Layer errors: 8
 
 
 <h4>Source</h4>
-The source can be found on <a href="http://github.com/boothj5/jarch">Github</a>
+The source can be found on <a href="http://github.com/boothj5/jarch" target="_blank">Github</a>
 
 
 <hr>
