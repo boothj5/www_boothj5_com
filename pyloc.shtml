@@ -32,7 +32,7 @@ Stats are broken down in to code, comments and whitespace, with Physical SLOC in
 </p>
 
 <p>
-Requires Python 2.6+ and <a href="http://www.wxpython.org/">WxPython</a> to run the GUI.
+Requires Python 2.6+ and <a href="http://www.wxpython.org/" target="_blank">WxPython</a> to run the GUI.
 </p>
 
 <h4>Screenshots</h4>
@@ -104,7 +104,7 @@ Where 'directory' is the directory to scan and -v will cause verbose output.
 <h4>Source</h4>
 
 <p>
-The source can be found on <a href="http://github.com/boothj5/pyloc">Github</a>
+The source can be found on <a href="http://github.com/boothj5/pyloc" target="_blank">Github</a>
 </p>
 
 <hr>
