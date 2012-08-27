@@ -25,52 +25,32 @@
 
 </script>
 </head>
-
 <body>
 <!--#include file="headerfooter.html" -->
 <div id="Content"/>
-
-<h4>Projects</h4>
-
-<p>
+<h2>Projects</h2>
 <ul>
 <li><a href="profanity.shtml">Profanity</a></li>
 <li><a href="head-unit.shtml">Head-Unit</a></li>
 <li><a href="jarch.shtml">JArch</a></li>
 <li><a href="pyloc.shtml">Pyloc</a></li>
 </ul>
-</p>
-<br>
-
 <h4>Find me on</h4>
-<p>
 <ul>
 <li><a href="https://github.com/boothj5" target="_blank">GitHub</a></li>
-<li><a href="https://www.ohloh.net/accounts/boothj5" target="_blank">Ohloh</a></li>
+<li><a href="http://www.ohloh.net/accounts/boothj5" target="_blank">Ohloh</a></li>
 <li><a href="http://openhatch.org/people/boothj5/" target="_blank">Openhatch</a></li>
 <li><a href="http://freecode.com/users/boothj5" target="_blank">Freecode</a></li>
 </ul>
-</p>
-<br>
-
 <h4>Email</h4>
-
-<p>
 <b>Email me at </b>&nbsp;<span class="backwards">moc.liamg@bew5jhtoob</span>
-</p>
-
+<h4>CV</h4>
+You can find my professional profile <a href="cvweb.pdf" target="_blank">here</a>
 <h4>Site Design</h4>
-
-<p>
 Thanks to my friend Matthew Balaam for giving my site some styling,
-</p>
-<p>
 see more of his work at <a href="http://www.matthewbalaam.co.uk" target="_blank">Matthew Balaam Graphic Design</a>.
-</p>
-
 <hr>
 </div>
 </body>
-
 </html>
 
