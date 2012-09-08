@@ -381,7 +381,7 @@ img, a img {
   margin: 20px 5% 20px 0%;
   display: inline-block;
 }
-
+/*
 img:hover {
   -moz-transform: scale(1.5, 1.5);
   -webkit-transform: scale(1.5, 1.5);
@@ -398,7 +398,7 @@ img:hover {
   -ms-transform-origin: 50% 50%;
   transform-origin: 50% 50%;
 }
-
+*/
 p {
   margin-bottom: 10px;
 }
