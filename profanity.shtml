@@ -26,16 +26,44 @@
 <h2>Profanity</h2> 
 
 <p>
-Profanity is a simple Jabber client written in C using <a href="http://www.gnu.org/software/ncurses/" target="_blank">ncurses</a> and <a href="http://strophe.im/libstrophe/" target="_blank">libstrophe</a>, inspired by <a href="http://irssi.org/" target="_blank">Irssi</a>.
+Profanity is a console based XMPP client written in C using 
+<a href="http://www.gnu.org/software/ncurses/" target="_blank">ncurses</a> and 
+<a href="http://strophe.im/libstrophe/" target="_blank">libstrophe</a>, 
+inspired by <a href="http://irssi.org/" target="_blank">Irssi</a>.
 </p>
 
 <p>
-Installation instructions and FAQ can be found on the <a href="https://github.com/boothj5/profanity/wiki" target="_blank">Github Wiki</a>
+<b>Latest release: 0.1.8</b><br>
+Download: <a href="profanity-0.1.8.tar.gz">profanity-0.1.8.tar.gz</a>
 </p>
 
 <p>
-Mailing list: <a href="https://groups.google.com/forum/#!forum/profanitydev" target="_blank">Google Groups Profanity</a>
+Installation instructions and FAQ can be found on the 
+<a href="https://github.com/boothj5/profanity/wiki" target="_blank">Github Wiki</a>
 </p>
+
+<p>
+Mailing list: 
+<a href="https://groups.google.com/forum/#!forum/profanitydev" target="_blank">Google Groups Profanity</a>
+</p>
+
+<p>
+The source can be found on 
+<a href="http://github.com/boothj5/profanity" target="_blank">Github</a>
+</p>
+
+<h4>Features</h4>
+
+<ul>
+<li>Supports any XMPP chat service including Google Talk</li>
+<li>Configuration via a simple properties file</li>
+<li>Desktop notifications and reminders</li>
+<li>Incoming Typing notifications</li>
+<li>Dated chat logs by user</li>
+<li>Option to show history of previous messages with a user</li>
+<li>Ability to send Tiny URLs</li>
+<li>Customisable UI<li>
+</ul>
 
 <h4>Screenshots</h4>
 
@@ -44,24 +72,6 @@ Mailing list: <a href="https://groups.google.com/forum/#!forum/profanitydev" tar
 <a href="profxfce.png"><img src="profxfce_small.png"></a>
 <a href="profwin.png"><img src="profwin_small.png"></a>
 <a href="profgreen.png"><img src="profgreen_small.png"></a>
-
-<h4>Features</h4>
-
-<ul>
-<li>XMPP chat, Jabber, GTalk</li>
-<li>Desktop notifications</li>
-<li>Typing notifications</li>
-<li>Chat logging</li>
-<li>Ability to send Tiny URLs</li>
-<li>Customisable UI<li>
-<li>Tab autocompletion<li>
-</ul>
-
-<h4>Source</h4>
-
-<p>The source can be found on <a href="http://github.com/boothj5/profanity" target="_blank">Github</a></p>
-
-<hr>
 
 </div>
 </body>
