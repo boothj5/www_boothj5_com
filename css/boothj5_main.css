@@ -192,6 +192,11 @@ button {
   overflow: visible;
 }
 
+.backwards {
+    unicode-bidi:bidi-override;
+    direction: rtl;
+}
+
 /* scale images in IE7 more attractively */
 .ie7 img {
   -ms-interpolation-mode: bicubic;

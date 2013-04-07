@@ -1,98 +1,66 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Boothj5: JArch</title>
-<meta http-equiv="content-type" content="text/html; charset=latin1">
-<meta name="viewport" content="width=device-width">
-<link href="css/boothj5_main.css" type="text/css" rel="stylesheet"/>
-<link href="css/xml-code.css" type="text/css" rel="stylesheet"/>
-<link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700' rel='stylesheet' type='text/css'>
-<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-34156261-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
+    <title>Boothj5: JArch</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Expires" content="-1"> 
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta name="viewport" content="width=device-width">
+    <link href="css/boothj5_main.css" type="text/css" rel="stylesheet"/>
+    <link href="css/xml-code.css" type="text/css" rel="stylesheet"/>
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700' rel='stylesheet' type='text/css'>
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script> 
+    <script type="text/javascript" src="js/analytics.js"></script>
+    <script type="text/javascript" src="js/trackclicks.js"></script>
 </head>
 <body>
-<!--#include file="headerfooter.html" -->
-<div id="Content"/>
-<h2><b>JArch</h2> </b>
+    <!--#include file="headerfooter.html" -->
+    <div id="Content"/>
+        <h2><b>JArch</h2></b>
 
-<p>
-JArch is a tool to verify the modularity and layering of Java source code.  In summary, a glorified package dependency analyser.
-</p>
+        <p>JArch is a tool to verify the modularity and layering of Java source code.  In summary, a glorified package dependency analyser.</p>
+        <p>In more detail, it allows you to specify rules about the dependencies between major components, functional areas and layers of your application, it will check them, and inform you of problems.</p>
+        <p>Its particulary suited to enterprise applications, built with Spring or JEE where functional areas and layering are central.</p>
+        <p>It is based loosley on <a href="http://japan.sourceforge.net/" target="_blank">JAPAN</a>, but the code is written from scratch, with a focus on components, modules and layers.</p>
 
-<p>
-In more detail, it allows you to specify rules about the dependencies between major components, functional areas and layers of your application, it will check them, and inform you of problems.
-</p>
+        <h4>Installation</h4>
 
-<p>
-Its particulary suited to enterprise applications, built with Spring or JEE where functional areas and layering are central.
-</p>
+        <p>Download from the downloads page at <a id="jarch-download" href="https://github.com/boothj5/jarch/downloads" target="_blank">GitHub</a>. jdom-2.0.1 is also required and can be downloaded at <a href="http://www.jdom.org/downloads/index.html" target="_blank">JDOM.org</a>.</p>
 
-<p>
-It is based loosley on <a href="http://japan.sourceforge.net/" target="_blank">JAPAN</a>, but the code is written from scratch, with a focus on components, modules and layers.
-</p>
+        <p>Put both in a directory available to your Ant build script or command line.</p>
 
-<h4>Installation</h4>
+        <h4>Running from the command line</h4>
 
-<p>
-Download from the downloads page at <a href="https://github.com/boothj5/jarch/downloads" target="_blank">GitHub</a>. jdom-2.0.1 is also required and can be downloaded at <a href="http://www.jdom.org/downloads/index.html" target="_blank">JDOM.org</a> .
-</p>
+        <p>To run straight from the command line (pointing to the jars on your system):</p>
 
-<p>
-Put both in a directory available to your Ant build script or command line.
-</p>
+        <div class="tabcode">
+            <pre>java -cp dist/jarch-0.1.2.jar:lib/jdom-2.0.1.jar com.boothj5.jarch.cli.Main <source-path> <config-file></pre>
+        </div>
 
-<h4>Running from the command line</h4>
+        <p>Where source-path is the path name to your java source code to be analysed, and config-file is the jarch configuration for your project, see below.</p>
 
-<p>
-To run straight from the command line (pointing to the jars on your system):
-</p>
+        <h4>Running using the Ant task</h4>
 
-<div class="tabcode">
-<pre>
-java -cp dist/jarch-0.1.2.jar:lib/jdom-2.0.1.jar com.boothj5.jarch.cli.Main <source-path> <config-file>
-</pre>
-</div>
+        <p>Include the following in build.xml:</p>
 
-<p>
-Where source-path is the path name to your java source code to be analysed, and config-file is the jarch configuration for your project, see below.
-</p>
-
-<h4>Running using the Ant task</h4>
-
-<p>
-Include the following in build.xml:
-</p>
-
-<div class="tabcode">
-<div class="highlight"><pre><span class="nt">&lt;taskdef</span> <span class="na">classname=</span><span class="s">&quot;com.boothj5.jarch.JArchTask&quot;</span> <span class="na">name=</span><span class="s">&quot;jarch&quot;</span> <span class="na">classpath=</span><span class="s">&quot;lib/build/jarch.jar:lib/build/jdom-2.0.1.jar&quot;</span><span class="nt">/&gt;</span>
-
-<span class="nt">&lt;target</span> <span class="na">name=</span><span class="s">&quot;jarch&quot;</span> <span class="nt">&gt;</span>
+        <div class="tabcode">
+            <div class="highlight">
+                <pre><span class="nt">&lt;taskdef</span> <span class="na">classname=</span><span class="s">&quot;com.boothj5.jarch.JArchTask&quot;</span> <span class="na">name=</span><span class="s">&quot;jarch&quot;</span> <span class="na">classpath=</span><span class="s">&quot;lib/build/jarch.jar:lib/build/jdom-2.0.1.jar&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;target</span> <span class="na">name=</span><span class="s">&quot;jarch&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;jarch</span> <span class="na">sourcePath=</span><span class="s">&quot;src/project/java&quot;</span> <span class="na">jarchConfigFile=</span><span class="s">&quot;jarch-config.xml&quot;</span> <span class="na">failBuild=</span><span class="s">&quot;false&quot;</span><span class="nt">/&gt;</span>
-<span class="nt">&lt;/target&gt;</span>
-</pre></div>
-</div>
+<span class="nt">&lt;/target&gt;</span></pre>
+            </div>
+        </div>
 
-<p>
-If the failBuild option is enabled JArch will consider any errors a build failure and Ant will exit, otherwise messages are shown and Ant will continue.
-</p>
+        <p>If the failBuild option is enabled JArch will consider any errors a build failure and Ant will exit, otherwise messages are shown and Ant will continue.</p>
 
-<h4>Configuration</h4>
+        <h4>Configuration</h4>
 
-
-<div class="tabcode">
-<div class="highlight"><pre><span class="nt">&lt;jarch-config&gt;</span>
+        <div class="tabcode">
+            <div class="highlight">
+                <pre><span class="nt">&lt;jarch-config&gt;</span>
 
     <span class="nt">&lt;layer-spec</span> <span class="na">name=</span><span class="s">&quot;spring&quot;</span><span class="nt">&gt;</span>
         <span class="nt">&lt;layer</span> <span class="na">name=</span><span class="s">&quot;controller&quot;</span><span class="nt">&gt;</span>
@@ -145,31 +113,23 @@ If the failBuild option is enabled JArch will consider any errors a build failur
         <span class="nt">&lt;/module&gt;</span>    
     <span class="nt">&lt;/rule-set&gt;</span>
 
-<span class="nt">&lt;/jarch-config&gt;</span>
-</pre></div>
-</div>
+<span class="nt">&lt;/jarch-config&gt;</span></pre>
+            </div>
+        </div>
 
-<p>
-The layer-spec defines a layering which can be referenced by modules. If a module references the layer spec it is validated against that spec. I.e. JArch will look for packages with names matching layer elements within the module.
-If it finds any it will check that your layers only call each other as you've specified in the dependencies of each layer.
-</p>
+        <p>The layer-spec defines a layering which can be referenced by modules. If a module references the layer spec it is validated against that spec. I.e. JArch will look for packages with names matching layer elements within the module.
+        If it finds any it will check that your layers only call each other as you've specified in the dependencies of each layer.</p>
 
-<p>
-A rule-set is a bunch of package dependency rules within a particular package. It is a list of module elements representing sub-packages each with an optional layer-spec attribute, and a set of depdendencies to validate.
-</p>
+        <p>A rule-set is a bunch of package dependency rules within a particular package. It is a list of module elements representing sub-packages each with an optional layer-spec attribute, and a set of depdendencies to validate.</p>
 
-<p>
-If JArch finds that you've made a call to another module that isn't defined in the caller module's dependencies, a message is ouput.
-</p>
+        <p>If JArch finds that you've made a call to another module that isn't defined in the caller module's dependencies, a message is ouput.</p>
 
-<p>
-The config file is validated first and will show errors when a non exitent module or layer-spec is specified, and show Warnings when circular module dependencies are specified.
-</p>
+        <p>The config file is validated first and will show errors when a non exitent module or layer-spec is specified, and show Warnings when circular module dependencies are specified.</p>
 
-<h4>Example output</h4>
+        <h4>Example output</h4>
 
-<div class="tabcode">
-<pre>
+        <div class="tabcode">
+            <pre>
 JArch - Java Architecture checker.
 
 Source path: /home/james/projects-git/jarch/test/resources/invalid
@@ -272,18 +232,13 @@ MODULE: "domain" must not import from "configuration"
          Line 7: import com.boothj5.jarchexample.configuration.controller.ConfigurationController;
 
 Module errors: 15
-Layer errors: 8
-</pre>
-</div>
+Layer errors: 8</pre>
+        </div>
 
-
-<h4>Source</h4>
-The source can be found on <a href="http://github.com/boothj5/jarch" target="_blank">Github</a>
-
-
-<hr>
-</div>
+        <h4>Source</h4>
+        The source can be found on <a id="github-jarch" href="http://github.com/boothj5/jarch" target="_blank">Github</a>
+        <hr>
+    </div>
 </body>
-
 </html>
 

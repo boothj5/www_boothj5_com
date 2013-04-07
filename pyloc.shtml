@@ -1,115 +1,85 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Boothj5: Pyloc</title>
-<meta name="viewport" content="width=device-width">
-<link href="css/boothj5_main.css" type="text/css" rel="stylesheet"/>
-<link href="css/python-code.css" type="text/css" rel="stylesheet"/>
-<link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700' rel='stylesheet' type='text/css'>
-<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-34156261-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
+    <title>Boothj5: Pyloc</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Expires" content="-1"> 
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta name="viewport" content="width=device-width">
+    <link href="css/boothj5_main.css" type="text/css" rel="stylesheet"/>
+    <link href="css/python-code.css" type="text/css" rel="stylesheet"/>
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700' rel='stylesheet' type='text/css'>
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script> 
+    <script type="text/javascript" src="js/analytics.js"></script>
+    <script type="text/javascript" src="js/trackclicks.js"></script>
 </head>
 <body>
-<!--#include file="headerfooter.html" -->
-<div id="Content"/>
-<h2>Pyloc</h2> 
+    <!--#include file="headerfooter.html" -->
+    <div id="Content"/>
+        <h2>Pyloc</h2> 
 
-<p>
-Pyloc is a Lines Of Code analyser written in Python. Supported languages are configurable. 
-Stats are broken down in to code, comments and whitespace, with Physical SLOC including everything.
-</p>
+        <p>Pyloc is a Lines Of Code analyser written in Python. Supported languages are configurable. 
+        Stats are broken down in to code, comments and whitespace, with Physical SLOC including everything.</p>
 
-<p>
-Requires Python 2.6+ and <a href="http://www.wxpython.org/" target="_blank">WxPython</a> to run the GUI.
-</p>
+        <p>Requires Python 2.6+ and <a href="http://www.wxpython.org/" target="_blank">WxPython</a> to run the GUI.</p>
 
-<h4>Screenshots</h4>
+        <h4>Screenshots</h4>
 
-<p>Click an image to load the fullsize version.</p>
-<a href="pyloc1.png"><img src="pyloc1.png"></a>
+        <p>Click an image to load the fullsize version.</p>
+        <a href="pyloc1.png"><img src="pyloc1.png"></a>
+        <a href="pyloc2.png"><img src="pyloc2.png"></a>
+        <a href="pyloc3.png"><img src="pyloc3.png"></a>
+        <a href="pyloc4.png"><img src="pyloc4.png"></a>
 
-<a href="pyloc2.png"><img src="pyloc2.png"></a>
+        <h4>Adding new languages</h4>
 
-<a href="pyloc3.png"><img src="pyloc3.png"></a>
+        <p>To add support for a new language, edit languages.py.  Add a string value representing the language and the definition to the language dictionary:</p>
 
-<a href="pyloc4.png"><img src="pyloc4.png"></a>
-<h4>Adding new languages</h4>
-
-<p>
-To add support for a new language, edit languages.py.  Add a string value representing the
-language and the definition to the language dictionary:
-</p>
-
-<div class="tabcode">
-<div class="highlight"><pre><span class="n">LUA</span> <span class="o">=</span> <span class="s">&quot;Lua&quot;</span>
+        <div class="tabcode">
+            <div class="highlight">
+                <pre><span class="n">LUA</span> <span class="o">=</span> <span class="s">&quot;Lua&quot;</span>
 
 <span class="n">LUA</span> <span class="p">:</span>
     <span class="p">{</span> <span class="n">EXTENSIONS</span><span class="p">:</span>    <span class="p">[</span> <span class="s">&quot;.lua&quot;</span> <span class="p">]</span> <span class="p">,</span>
       <span class="n">LINECOMMENTS</span><span class="p">:</span>  <span class="s">&quot;--&quot;</span> <span class="p">,</span>
-      <span class="n">BLOCKCOMMENTS</span><span class="p">:</span> <span class="p">[</span> <span class="p">(</span> <span class="s">&quot;--[[&quot;</span> <span class="p">,</span> <span class="s">&quot;]]&quot;</span> <span class="p">)</span> <span class="p">]</span> <span class="p">}</span> <span class="p">}</span>
-</pre>
-</div>
-</div>
+      <span class="n">BLOCKCOMMENTS</span><span class="p">:</span> <span class="p">[</span> <span class="p">(</span> <span class="s">&quot;--[[&quot;</span> <span class="p">,</span> <span class="s">&quot;]]&quot;</span> <span class="p">)</span> <span class="p">]</span> <span class="p">}</span> <span class="p">}</span></pre>
+            </div>
+        </div>
 
-<p>
-Where the string represnets the name of the language, and the dictionary entries represent:
-</p>
+        <p>Where the string represnets the name of the language, and the dictionary entries represent:</p>
 
-<p>
-<ol>
-<li>EXTENSIONS is a comma seperated list of file extensions.</li>
-<li>LINECOMMENTS (optional) is a string representing characters used for line comments.</li>
-<li>BLOCKCOMMENTS (optional) is a comma seperated list of pairs of begin and end block comment strings.</li>
-</ol>
-</p>
+        <p>
+            <ol>
+                <li>EXTENSIONS is a comma seperated list of file extensions.</li>
+                <li>LINECOMMENTS (optional) is a string representing characters used for line comments.</li>
+                <li>BLOCKCOMMENTS (optional) is a comma seperated list of pairs of begin and end block comment strings.</li>
+            </ol>
+        </p>
 
-<h4>Running</h4>
+        <h4>Running</h4>
 
-<p>
-Pyloc can either be run as a desktop GUI:
-</p>
+        <p>Pyloc can either be run as a desktop GUI:</p>
 
-<div class="tabcode">
-<pre>
-./pyloc.py
-</pre>
-</div>
+        <div class="tabcode">
+            <pre>./pyloc.py</pre>
+        </div>
 
-<p>
-Or as a terminal application by calling pylocstats.py directly:
-</p>
+        <p>Or as a terminal application by calling pylocstats.py directly:</p>
 
-<div class="tabcode">
-<pre>
-Usage: pylocstats.py directory [-v]
-</pre>
-</div>
+        <div class="tabcode">
+            <pre>Usage: pylocstats.py directory [-v]</pre>
+        </div>
 
-<p>
-Where 'directory' is the directory to scan and -v will cause verbose output.
-</p>
+        <p>Where 'directory' is the directory to scan and -v will cause verbose output.</p>
 
-<h4>Source</h4>
+        <h4>Source</h4>
 
-<p>
-The source can be found on <a href="http://github.com/boothj5/pyloc" target="_blank">Github</a>
-</p>
+        <p>The source can be found on <a id="github-pyloc" href="http://github.com/boothj5/pyloc" target="_blank">Github</a></p>
 
-<hr>
-</div>
+        <hr>
+    </div>
 </body>
-
 </html>
 

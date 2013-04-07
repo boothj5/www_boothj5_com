@@ -1,56 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Boothj5: Home</title>
-
-<style type="text/css">
-.backwards {unicode-bidi:bidi-override; direction: rtl;}
-</style>
-
-<meta name="viewport" content="width=device-width">
-<link href="css/boothj5_main.css" type="text/css" rel="stylesheet"/>
-<link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700' rel='stylesheet' type='text/css'>
-<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-34156261-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
+    <title>Boothj5: Home</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Expires" content="-1"> 
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta name="viewport" content="width=device-width">
+    <link href="css/boothj5_main.css" type="text/css" rel="stylesheet"/>
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700' rel='stylesheet' type='text/css'>
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script> 
+    <script type="text/javascript" src="js/analytics.js"></script>
+    <script type="text/javascript" src="js/trackclicks.js"></script>
 </head>
 <body>
-<!--#include file="headerfooter.html" -->
-<div id="Content"/>
-<h2>Projects</h2>
-<ul>
-<li><a href="http://www.profanity.im" target="_blank">Profanity</a></li>
-<li><a href="head-unit.shtml">Head-Unit</a></li>
-<li><a href="jarch.shtml">JArch</a></li>
-<li><a href="pyloc.shtml">Pyloc</a></li>
-</ul>
-<h4>Find me on</h4>
-<ul>
-<li><a href="https://github.com/boothj5" target="_blank">GitHub</a></li>
-<li><a href="http://www.ohloh.net/accounts/boothj5" target="_blank">Ohloh</a></li>
-<li><a href="http://openhatch.org/people/boothj5/" target="_blank">Openhatch</a></li>
-<li><a href="http://freecode.com/users/boothj5" target="_blank">Freecode</a></li>
-</ul>
-<h4>Email</h4>
-<b>Email me at </b>&nbsp;<span class="backwards">moc.liamg@bew5jhtoob</span>
-<h4>CV</h4>
-You can find my professional profile <a href="jamesboothcv.pdf" target="_blank">here</a>
-<h4>Site Design</h4>
-Thanks to my friend Matthew Balaam for giving my site some styling,
-see more of his work at <a href="http://www.matthewbalaam.co.uk" target="_blank">Matthew Balaam Graphic Design</a>.
-<hr>
-</div>
+    <!--#include file="headerfooter.html" -->
+    <div id="Content"/>
+        <h2>Projects</h2>
+        <ul>
+            <li><a id="link-profanity" href="http://www.profanity.im" target="_blank">Profanity</a></li>
+            <li><a id="link-head-unit" href="head-unit.shtml">Head-Unit</a></li>
+            <li><a id="link-jarch" href="jarch.shtml">JArch</a></li>
+            <li><a id="link-pyloc" href="pyloc.shtml">Pyloc</a></li>
+        </ul>
+        <h4>Find me on</h4>
+        <ul>
+            <li><a id="find-github" href="https://github.com/boothj5" target="_blank">GitHub</a></li>
+            <li><a id="find-ohloh" href="http://www.ohloh.net/accounts/boothj5" target="_blank">Ohloh</a></li>
+            <li><a id="find-openhatch" href="http://openhatch.org/people/boothj5/" target="_blank">Openhatch</a></li>
+            <li><a id="find-freecode" href="http://freecode.com/users/boothj5" target="_blank">Freecode</a></li>
+        </ul>
+        <h4>Email</h4>
+        <b>Email me at </b>&nbsp;<span class="backwards">moc.liamg@bew5jhtoob</span>
+        <h4>CV</h4>
+        You can find my professional profile <a id="link-cv" href="jamesboothcv.pdf" target="_blank">here</a>
+        <h4>Site Design</h4>
+        Thanks to my friend Matthew Balaam for giving my site some styling,
+        see more of his work at <a href="http://www.matthewbalaam.co.uk" target="_blank">Matthew Balaam Graphic Design</a>.
+        <hr>
+    </div>
 </body>
 </html>
-

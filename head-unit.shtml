@@ -1,81 +1,60 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Boothj5: Head-Unit</title>
-<meta http-equiv="content-type" content="text/html; charset=latin1">
-<meta name="viewport" content="width=device-width">
-<link href="css/boothj5_main.css" type="text/css" rel="stylesheet"/>
-<link href="css/c-code.css" type="text/css" rel="stylesheet"/>
-<link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700' rel='stylesheet' type='text/css'>
-<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-34156261-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
+    <title>Boothj5: Head-Unit</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Expires" content="-1"> 
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta name="viewport" content="width=device-width">
+    <link href="css/boothj5_main.css" type="text/css" rel="stylesheet"/>
+    <link href="css/c-code.css" type="text/css" rel="stylesheet"/>
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700' rel='stylesheet' type='text/css'>
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script> 
+    <script type="text/javascript" src="js/analytics.js"></script>
+    <script type="text/javascript" src="js/trackclicks.js"></script>
 </head>
 <body>
-<!--#include file="headerfooter.html" -->
-<div id="Content"/>
-<h2><b>Head-Unit</h2> </b>
+    <!--#include file="headerfooter.html" -->
+    <div id="Content"/>
+        <h2><b>Head-Unit</h2> </b>
 
-<p>
-Head-Unit is a small unit testing framework for C and C++, written in C.
-</p>
+        <p>Head-Unit is a small unit testing framework for C and C++, written in C.</p>
 
-<h4>Installing head-unit</h4>
+        <h4>Installing head-unit</h4>
 
-<p>
-In the project folder, run:
-<p>
+        <p>In the project folder, run:<p>
 
-<div class="tabcode">
-<pre>
-make install
-</pre>
-</div>
+        <div class="tabcode">
+            <pre>make install</pre>
+        </div>
 
-<p>
-This will install head-unit in <b>~/lib</b> and <b>~/include</b>.
-</p>
+        <p>This will install head-unit in <b>~/lib</b> and <b>~/include</b>.</p>
 
-<p>
-Alternatively you can download and install the debian binary package from <a href="libheadunit_0.11-1_amd64.deb">here</a> by running:
-<p>
+        <p>Alternatively you can download and install the debian binary package from <a id="head-unit-debian" href="libheadunit_0.11-1_amd64.deb">here</a> by running:<p>
 
-<div class="tabcode">
-<pre>
-sudo dpkg -i libheadunit_0.11-1_amd64.deb
-</pre>
-</div>
+        <div class="tabcode">
+            <pre>sudo dpkg -i libheadunit_0.11-1_amd64.deb</pre>
+        </div>
 
-<h4>Using head-unit</h4>
+        <h4>Using head-unit</h4>
 
-<p>
-Basic steps are:
-<ol>
-<li>Write the tests</li>
-<li>Register the tests in a test module</li>
-<li>Register the test modules in a testsuite</li>
-<li>Run the testsuite</li>
-</ol>
-</p>
+        <p>Basic steps are:
+        <ol>
+            <li>Write the tests</li>
+            <li>Register the tests in a test module</li>
+            <li>Register the test modules in a testsuite</li>
+            <li>Run the testsuite</li>
+        </ol>
+        </p>
 
+        <h4>Write a test module</h4>
+        <p>some-tests.c:</p>
 
-<h4>Write a test module</h4>
-<p>some-tests.c:</p>
-
-
-<div class="tabcode">
-<div class="highlight"><pre><span class="cp">#include &lt;string.h&gt;</span>
+        <div class="tabcode">
+            <div class="highlight">
+                <pre><span class="cp">#include &lt;string.h&gt;</span>
 <span class="cp">#include &lt;head-unit.h&gt;</span>
 
 <span class="k">static</span> <span class="kt">void</span> <span class="nf">setup</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
@@ -121,34 +100,32 @@ Basic steps are:
     <span class="n">TEST</span><span class="p">(</span><span class="n">test_something</span><span class="p">);</span>
     <span class="n">TEST</span><span class="p">(</span><span class="n">test_something_else</span><span class="p">);</span>
     <span class="n">TEARDOWN</span><span class="p">(</span><span class="n">teardown</span><span class="p">);</span>
-<span class="p">}</span>
-</pre></div>
-</div>
+<span class="p">}</span></pre>
+            </div>
+        </div>
 
-<p>The use of static is optional but stops tests with similar names in different source files conflicting.</p>
-<p>
-The register function must not be static.
-</p>
-<p>
-The SETUP, BEFORETEST, AFTERTEST and TEARDOWN functions and equivalent macros are optional.
-</p>
-<h4>Create the testsuite header and source file</h4>
-<p>testsuite.h:</p>
-<div class="tabcode">
-<div class="highlight"><pre><span class="cp">#ifndef TESTSUITE_H</span>
+        <p>The use of static is optional but stops tests with similar names in different source files conflicting.</p>
+        <p>The register function must not be static.</p>
+        <p>The SETUP, BEFORETEST, AFTERTEST and TEARDOWN functions and equivalent macros are optional.</p>
+
+        <h4>Create the testsuite header and source file</h4>
+        <p>testsuite.h:</p>
+        <div class="tabcode">
+            <div class="highlight">
+                <pre><span class="cp">#ifndef TESTSUITE_H</span>
 <span class="cp">#define TESTSUITE_H</span>
 
 <span class="kt">void</span> <span class="nf">register_some_tests</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">;</span>
 <span class="kt">void</span> <span class="nf">register_some_other_tests</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">;</span>
 
-<span class="cp">#endif</span>
-</pre></div>
-</div>
-<p>
-testsuite.c:
-</p>
-<div class="tabcode">
-<div class="highlight"><pre><span class="cp">#include &lt;head-unit.h&gt;</span>
+<span class="cp">#endif</span></pre>
+            </div>
+        </div>
+        
+        <p>testsuite.c:</p>
+        <div class="tabcode">
+            <div class="highlight">
+                <pre><span class="cp">#include &lt;head-unit.h&gt;</span>
 <span class="cp">#include &quot;testsuite.h&quot;</span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
@@ -157,90 +134,75 @@ testsuite.c:
     <span class="n">register_some_other_tests</span><span class="p">()</span> <span class="p">;</span>
     <span class="n">run_suite</span><span class="p">()</span> <span class="p">;</span>
     <span class="k">return</span> <span class="mi">0</span> <span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-</div>
+<span class="p">}</span></pre>
+            </div>
+        </div>
 
-<h4>Build and run the tests</h4>
+        <h4>Build and run the tests</h4>
+        <p>C compiler flags:</p>
 
-<p>C compiler flags:</p>
+        <div class="tabcode">
+            <pre>-lstdc++ -I ~/include -L ~/lib -l headunit</pre>
+        </div>
 
-<div class="tabcode">
-<pre>
--lstdc++ -I ~/include -L ~/lib -l headunit
-</pre>
-</div>
+        <p> C++ compiler flags:</p>
 
-<p>
-C++ compiler flags:
-</p>
+        <div class="tabcode">
+            <pre>-Wno-write-strings -I ~/include -L ~/lib -l headunit</pre>
+        </div>
 
-<div class="tabcode">
-<pre>
--Wno-write-strings -I ~/include -L ~/lib -l headunit
-</pre>
-</div>
+        <p>Example C make targets:</p>
 
-<p>
-Example C make targets:
-</p>
-
-<div class="tabcode">
-<pre>
-compile-tests: testsuite.o some_tests.o something.o
-    $(CC) -lstdc++ testsuite.o some_tests.o something.o -I ~/include -L ~/lib -o testsuite -l headunit
+        <div class="tabcode">
+            <pre>compile-tests: testsuite.o some_tests.o something.o
+$(CC) -lstdc++ testsuite.o some_tests.o something.o -I ~/include -L ~/lib -o testsuite -l headunit
 
 test: compile-tests
-    ./testsuite
-</pre>
-</div>
+    ./testsuite</pre>
+        </div>
 
-<p>
-Example C++ make targets:
-</p>
+        <p>Example C++ make targets:</p>
 
-<div class="tabcode">
-<pre>
-compile-tests: testsuite.o some_tests.o something.o
-    $(CC) -Wno-write-strings testsuite.o some_tests.o something.o -I ~/include -L ~/lib -o testsuite -l headunit
+        <div class="tabcode">
+            <pre>compile-tests: testsuite.o some_tests.o something.o
+$(CC) -Wno-write-strings testsuite.o some_tests.o something.o -I ~/include -L ~/lib -o testsuite -l headunit
 
 test: compile-tests
-    ./testsuite
-</pre>
-</div>
+    ./testsuite</pre>
+        </div>
 
-<h4>C asserts</h4>
-<div class="tabcode">
-<div class="highlight"><pre><span class="n">assert_true</span><span class="p">(</span><span class="kt">int</span> <span class="n">expression</span><span class="p">);</span>
+        <h4>C asserts</h4>
+        <div class="tabcode">
+            <div class="highlight">
+                <pre><span class="n">assert_true</span><span class="p">(</span><span class="kt">int</span> <span class="n">expression</span><span class="p">);</span>
 <span class="n">assert_false</span><span class="p">(</span><span class="kt">int</span> <span class="n">expression</span><span class="p">);</span>
 <span class="n">assert_int_equals</span><span class="p">(</span><span class="kt">int</span> <span class="n">expected</span><span class="p">,</span> <span class="kt">int</span> <span class="n">actual</span><span class="p">);</span>
 <span class="n">assert_string_equals</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="n">expected</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">actual</span><span class="p">);</span>
-<span class="n">assert_is_null</span><span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="n">ptr</span><span class="p">);</span>
-</pre></div>
-</div>
+<span class="n">assert_is_null</span><span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="n">ptr</span><span class="p">);</span></pre>
+            </div>
+        </div>
 
-<h4>C++ asserts</h4>
-<div class="tabcode">
-<div class="highlight"><pre><span class="n">assert_equals</span><span class="p">(</span><span class="n">T</span> <span class="n">expected</span><span class="p">,</span> <span class="n">T</span> <span class="n">actual</span><span class="p">);</span>
-</pre></div>
-</div>
+        <h4>C++ asserts</h4>
+        <div class="tabcode">
+            <div class="highlight">
+                <pre><span class="n">assert_equals</span><span class="p">(</span><span class="n">T</span> <span class="n">expected</span><span class="p">,</span> <span class="n">T</span> <span class="n">actual</span><span class="p">);</span></pre>
+            </div>
+        </div>
 
-<p>Where T must implement the following:
-</p>
+        <p>Where T must implement the following:</p>
 
-<div class="tabcode">
-<div class="highlight"><pre><span class="kt">bool</span> <span class="n">T</span><span class="o">::</span><span class="k">operator</span><span class="o">==</span><span class="p">(</span><span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">other</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+        <div class="tabcode">
+            <div class="highlight">
+                <pre><span class="kt">bool</span> <span class="n">T</span><span class="o">::</span><span class="k">operator</span><span class="o">==</span><span class="p">(</span><span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">other</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
 <span class="kt">bool</span> <span class="n">T</span><span class="o">::</span><span class="k">operator</span><span class="o">!=</span><span class="p">(</span><span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">other</span><span class="p">)</span> <span class="k">const</span><span class="p">;</span>
-<span class="n">ostream</span><span class="o">&amp;</span> <span class="k">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">strm</span><span class="p">,</span> <span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">obj</span><span class="p">);</span>
-</pre></div>
-</div>
-<h4>Source</h4>
-The source can be found on <a href="http://github.com/boothj5/head-unit" target="_blank">Github</a>
-
-
-<hr>
-</div>
+<span class="n">ostream</span><span class="o">&amp;</span> <span class="k">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="n">strm</span><span class="p">,</span> <span class="k">const</span> <span class="n">T</span><span class="o">&amp;</span> <span class="n">obj</span><span class="p">);</span></pre>
+            </div>
+        </div>
+        
+        <h4>Source</h4>
+        The source can be found on <a id="github-head-unit" href="http://github.com/boothj5/head-unit" target="_blank">Github</a>
+        <hr>
+    </div>
 </body>
-
 </html>
 
