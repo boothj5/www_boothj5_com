@@ -1,6 +1,6 @@
 var track = function (category, label) {
-    alert("Clicked " + category + ", " + label);
-//   _gaq.push(['_trackEvent', category, "clicked", label]);
+//    alert("Clicked " + category + ", " + label);
+    _gaq.push(['_trackEvent', category, "clicked", label]);
 };
 
 $(document).ready(function () {
