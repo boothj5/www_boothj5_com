@@ -200,7 +200,7 @@ test: compile-tests
         </div>
         
         <h4>Source</h4>
-        The source can be found on <a id="github-head-unit" href="http://github.com/boothj5/head-unit" target="_blank">Github</a>
+        The source can be found on <a id="github-headunit" href="http://github.com/boothj5/head-unit" target="_blank">Github</a>
         <hr>
     </div>
 </body>
