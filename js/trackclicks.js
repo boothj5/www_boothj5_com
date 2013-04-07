@@ -1,6 +1,6 @@
 var track = function (category, label) {
-//    alert("Clicked " + category + ", " + label);
-   _gaq.push(['_trackEvent', category, "clicked", label]);
+    alert("Clicked " + category + ", " + label);
+//   _gaq.push(['_trackEvent', category, "clicked", label]);
 };
 
 $(document).ready(function () {
@@ -40,12 +40,12 @@ $(document).ready(function () {
     });
     
     $("[id^=github]").click(function (e) {
-        var repo = $(this).attr("id").split("-")[1];
+        var repo = $(this).attr("id");
         track("github-repo", repo);
     });
 
     $("[id^=download]").click(function (e) {
-        var project = $(this).attr("id").split("-")[1];
+        var project = $(this).attr("id");
         track("download", project);
     });
 });
