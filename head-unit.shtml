@@ -32,7 +32,7 @@
 
         <p>This will install head-unit in <b>~/lib</b> and <b>~/include</b>.</p>
 
-        <p>Alternatively you can download and install the debian binary package from <a id="head-unit-debian" href="libheadunit_0.11-1_amd64.deb">here</a> by running:<p>
+        <p>Alternatively you can download and install the debian binary package from <a id="download-headunit" href="libheadunit_0.11-1_amd64.deb">here</a> by running:<p>
 
         <div class="tabcode">
             <pre>sudo dpkg -i libheadunit_0.11-1_amd64.deb</pre>

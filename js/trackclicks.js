@@ -44,4 +44,8 @@ $(document).ready(function () {
         track("github-repo", repo);
     });
 
+    $("[id^=download]").click(function (e) {
+        var project = $(this).attr("id").split("-")[1];
+        track("download", project);
+    });
 });
