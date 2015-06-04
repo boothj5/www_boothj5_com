@@ -7,6 +7,7 @@ $(document).ready(function () {
     var profanity_links = "#link-profanity, #header-link-profanity, #redirect-profanity",
         head_unit_links = "#link-head-unit, #header-link-head-unit",
         jarch_links = "#link-jarch, #header-link-jarch",
+        minions_links = "#link-minions, #header-link-minions",
         pyloc_links = "#link-pyloc, #header-link-pyloc",
         cv_links = "#link-cv, #header-link-cv";
 
@@ -26,6 +27,10 @@ $(document).ready(function () {
         track("projects", "jarch");
     });
     
+    $(minions_links).click(function (e) {
+        track("projects", "minions");
+    });
+
     $(pyloc_links).click(function (e) {
         track("projects", "pyloc");
     });
