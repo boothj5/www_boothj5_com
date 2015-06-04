@@ -8,6 +8,7 @@ $(document).ready(function () {
         head_unit_links = "#link-head-unit, #header-link-head-unit",
         jarch_links = "#link-jarch, #header-link-jarch",
         minions_links = "#link-minions, #header-link-minions",
+        stabber_links = "#link-stabber, #header-link-stabber",
         pyloc_links = "#link-pyloc, #header-link-pyloc",
         cv_links = "#link-cv, #header-link-cv";
 
@@ -29,6 +30,10 @@ $(document).ready(function () {
     
     $(minions_links).click(function (e) {
         track("projects", "minions");
+    });
+
+    $(stabber_links).click(function (e) {
+        track("projects", "stabber");
     });
 
     $(pyloc_links).click(function (e) {

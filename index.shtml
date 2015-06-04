@@ -20,8 +20,9 @@
         <h2>Projects</h2>
         <ul>
             <li><a id="link-profanity" href="http://www.profanity.im" target="_blank">Profanity</a> - Console based XMPP Client, written in C</li>
-            <li><a id="link-head-unit" href="head-unit.shtml">Head-Unit</a> - Simple C/C++ unit testing framework</li>
             <li><a id="link-minions" href="http://www.github.com/boothj5/minions" target="_blank">Minions</a> - Java XMPP chatbot with plugin architecture</li>
+            <li><a id="link-stabber" href="http://www.github.com/boothj5/stabber" target="_blank">Stabber</a> - Stubbed XMPP (Jabber) Server for testing XMPP applications</li>
+            <li><a id="link-head-unit" href="head-unit.shtml">Head-Unit</a> - Simple C/C++ unit testing framework</li>
             <li><a id="link-jarch" href="jarch.shtml">JArch</a> - Java dependency static analyser</li>
             <li><a id="link-pyloc" href="pyloc.shtml">Pyloc</a> - Lines of Code counter, with GUI and CLI interface, written in Python</li>
         </ul>
